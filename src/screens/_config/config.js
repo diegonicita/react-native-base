@@ -23,10 +23,12 @@ export const configStack = {
 }
 
 const images = [
-  require('../../assets/picture.jpg'),
+  require('../../assets/robotech.png'),
   require('../../assets/batistuta.jpg'),
   require('../../assets/riverboca.jpg'),
-  require('../../assets/infootball.png')
+  require('../../assets/infootball.png'),
+  require('../../assets/cafeapp.png'),
+  require('../../assets/cinemaapp.png'),
 ]
 export const configHome = {
   webWidth: 600,
@@ -51,7 +53,7 @@ export const configHome = {
           english: '1 minute ago',
           spanish: 'Hace 1 minuto'
         },
-        image: images[0]
+        image: images[0]        
       }
     },
     {
@@ -90,7 +92,7 @@ export const configHome = {
           english: '3 minutes ago',
           spanish: 'Hace 3 minutos'
         },
-        image: images[3]
+        image: images[4]
       }
     },
     {
@@ -109,7 +111,7 @@ export const configHome = {
           english: '4 minutes ago',
           spanish: 'Hace 4 minutos'
         },
-        image: images[3]
+        image: images[5]
       }
     },
   ],
@@ -117,16 +119,19 @@ export const configHome = {
     title: 'Resumen del dia',
     news: [
       {
-        text: 'D. Nicita tiene un nuevo Curriculum Vitae realizado con React Native',
-        image: images[2]
+        text: {spanish: 'Cafe App: Encuentra un cafe muy cerca tuyo',
+        english: 'Cafe App: Find a coffee store next to you'},
+        image: images[4]
       },
       {
-        text: 'Ahora estoy usando imagenes generadas por la IA de MidJourney',
-        image: images[0]
+        text: {spanish: 'Infooball: Ayuda a los clubes a encontrar las nuevas promesas del futbol',
+        english: 'Infooball: Help football clubs to find new players'},
+        image: images[3]
       },
       {
-        text: 'Tambien voy a agregar contenido generado por ChatGPT',
-        image: images[1]
+        text: {spanish: 'Cinema App: Compra un ticket para ver tu pelicula favorita',
+        english: 'Cinema App: Buy a ticket to your favorite movie'},
+        image: images[5]
       }
     ]
   }

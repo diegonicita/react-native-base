@@ -14,10 +14,10 @@ export const CardList = (props) => {
               <Image style={styles.image} resizeMode="cover" source={u.image} />
             </View>
             <View style={styles.item2}>
-              {u.text.length < 70 ? (
-                <Text style={styles.text}>{u.text}</Text>
+              {u.text.english.length < 100 ? (
+                <Text style={styles.text}>{u.text.english}</Text>
               ) : (
-                <Text style={styles.text}>{u.text.substring(0, 70)}...</Text>
+                <Text style={styles.text}>{u.text.english.substring(0, 100)}...</Text>
               )}
             </View>
           </View>

@@ -30,7 +30,8 @@ const styles = StyleSheet.create({
   image: {
     padding: 0,
     borderRadius: 5,    
-    height: 250
+    height: 250,
+    resizeMode: 'contain'   
   },
   newsTitle: {
     fontSize: 20,

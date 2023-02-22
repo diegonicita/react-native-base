@@ -13,7 +13,7 @@ export const Home = () => {
     <>
       <ScrollView style={styles.scrollView}>
         <Text style={styles.subHeader}> {config.title} </Text>
-        <View style={styles.subcontainer}>
+        <View>
           {config.bigCard.map((item, index) => (
             <BigCard
               key={index}
@@ -73,5 +73,5 @@ const styles = StyleSheet.create({
     paddingVertical: 5,
     marginBottom: 10,
     fontWeight: 'bold'
-  }
+  },
 })
