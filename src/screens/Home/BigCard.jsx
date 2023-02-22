@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   },
   image: {
     padding: 0,
-    borderRadius: '5%',    
+    borderRadius: 5,    
     height: 250
   },
   newsTitle: {

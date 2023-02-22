@@ -14,8 +14,9 @@ export const Home = () => {
       <ScrollView style={styles.scrollView}>
         <Text style={styles.subHeader}> {config.title} </Text>
         <View style={styles.subcontainer}>
-          {config.bigCard.map((item) => (
+          {config.bigCard.map((item, index) => (
             <BigCard
+              key={index}
               title={item.title.english}
               newsTitle={item.news.text.english}
               author={item.news.author}
@@ -23,8 +24,9 @@ export const Home = () => {
               image={item.news.image}
             />
           ))}
-          {config.bigCard.map((item) => (
+          {config.bigCard.map((item, index) => (
             <LittleCard
+              key={index}
               title={item.title.english}
               newsTitle={item.news.text.english}
               author={item.news.author}
