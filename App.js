@@ -1,8 +1,9 @@
 import React from 'react'
-import { createTheme, ThemeProvider, Button } from '@rneui/themed'
+import { createTheme, ThemeProvider } from '@rneui/themed'
 import { Provider } from 'react-redux'
 import { store } from './src/redux/store/store'
-import { Routes } from './src/routes/Routes'
+import { StackRoutes } from './src/routes/StackRoutes'
+// import { TabRoutes } from './src/routes/TabRoutes'
 
 const theme = createTheme({
   lightColors: {},
@@ -13,7 +14,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-        <Routes />
+        <StackRoutes />
       </ThemeProvider>
     </Provider>
   )

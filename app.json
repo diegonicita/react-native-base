@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "residenciasmedicas",
+    "slug": "rm-residencias-medicas",
+    "owner": "diegonicita",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/icon-2.png",
+    "splash": {
+      "image": "./src/assets/splash-2.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/adaptive-icon-2.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.diegonicita.rmresidenciasmedicas"
+    },
+    "web": {
+      "favicon": "./src/assets/favicon-2.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "fa5ce477-bee6-49ed-8323-7cd8362c6bf7"
+      }
+    }
+  }
+}

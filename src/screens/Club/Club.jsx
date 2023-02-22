@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import { Button, Dialog, CheckBox, ListItem, Avatar } from '@rneui/themed'
 import { View, ScrollView, Text, StyleSheet } from 'react-native'
 import { makeStyles, useThemeMode } from '@rneui/themed'
-import { useMessageStore } from '../redux/hooks/useMessage'
+import { useMessageStore } from '../../redux/hooks/useMessage'
 
-export const Dialogs = ({ navigation }) => {
+import { ThemeButton } from '../../components/ThemeButton'
+
+export const Club = ({ navigation }) => {
   const [visible1, setVisible1] = useState(false)
   const [visible2, setVisible2] = useState(false)
   const [visible3, setVisible3] = useState(false)
@@ -55,7 +57,7 @@ export const Dialogs = ({ navigation }) => {
   ]
 
   const handleNavigate = () => {
-    navigation.navigate('Badges')
+    navigation.navigate('Home')
   }
 
   const commonProps = {
@@ -65,33 +67,38 @@ export const Dialogs = ({ navigation }) => {
   }
 
   return (
-    <View style={styles.container}>     
+    <>
+    <View>
+      <Text style={styles.subHeader}> Mi Club </Text>   
+    </View>
+    <View style={styles.container}> 
+      
       <ScrollView>
-        <Button title="Simple Dialog"
+        <Button title="Barcelona vs Real Madrid"
               {...commonProps}
               onPress={toggleDialog1}
          />
-         <Button title="Multi Action Dialog"
+         <Button title="River Plate vs Boca Juniors"
               {...commonProps}
               onPress={toggleDialog2}
          />
-         <Button title="Loading Dialog"
+         <Button title="Atletico Madrid vs Real Madrid"
               {...commonProps}
               onPress={toggleDialog3}
          />
-         <Button title="Buttonless Dialog"
+         <Button title="Racing Club vs Independiente"
               {...commonProps}
               onPress={toggleDialog4}
          />
-         <Button title="Custom Dialog 1"
+         <Button title="Colon vs Union"
               {...commonProps}
               onPress={toggleDialog5}
          />
-         <Button title="Custom Dialog 2"
+         <Button title="San Martin vs Atletico Tucuman"
               {...commonProps}
               onPress={toggleDialog6}
          />        
-      <Button title="Badges"
+      <Button title="Central Cordoba vs Mitre"
               {...commonProps}
               onPress={handleNavigate}
             />
@@ -157,7 +164,9 @@ export const Dialogs = ({ navigation }) => {
           </ListItem>
         ))}
       </Dialog>
+    {/* <ThemeButton /> */}
     </View>
+    </>
   )
 }
 
@@ -183,5 +192,12 @@ const useStyles = makeStyles((theme) => ({
   buttonTitle:  
   { 
     fontWeight: 'bold'
-  }  
+  },   
+  subHeader: {
+      backgroundColor: '#2089dc',
+      color: 'white',
+      textAlign: 'center',
+      paddingVertical: 5,
+      marginBottom: 10
+    }
 }))

@@ -21,15 +21,15 @@ export const InitialPage = ({ navigation }) => {
 
   const handleNavigateMenu = () => {
     setMessage('Yendo a Main Menu')
-    navigation.navigate('Dialogs')
+    navigation.navigate('Home')
   }
   const handleNavigateBadges = () => {
     setMessage('Yendo a Badges')
-    navigation.navigate('Badges')
+    navigation.navigate('Home')
   }
   const handleNavigateCards = () => {
     setMessage('Yendo a Cards')
-    navigation.navigate('Cards')
+    navigation.navigate('Home')
   }
   const commonProps = {
     buttonStyle: styles.button,

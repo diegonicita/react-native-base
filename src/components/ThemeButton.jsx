@@ -18,9 +18,9 @@ export const ThemeButton = () => {
         visible={visible}
         icon={<Icon name={mode !== 'dark' ? 'moon' : 'lightbulb'} 
               size={20}
-              color={mode !== 'dark' ? 'black' : 'white'}              
+              color={mode !== 'dark' ? 'white' : 'black'}              
               />}         
-        color={mode === 'dark' ? 'black' : 'white'}
+        color={mode === 'dark' ? 'white' : 'black'}
         onPress={handleOnPress}   
         // style={{borderWidth: 1, borderColor: mode !== 'dark' ? 'black' : 'white'}}             
       />      
@@ -29,11 +29,11 @@ export const ThemeButton = () => {
 
 const useStyles = makeStyles((theme) => ({
     view: {
-        // width: 60,  
-        // height: 60,   
-        // borderRadius: 30,                   
-        // position: 'absolute',                                          
-        // bottom: 0,                                                    
-        // right: 15, 
+         width: 60,  
+         height: 60,   
+         borderRadius: 15,                   
+         position: 'absolute',                                          
+         top: 0,                                                    
+         right: 15, 
     }
   }));

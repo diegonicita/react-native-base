@@ -1,0 +1,1916 @@
+{
+  "get": "players",
+  "parameters": {
+    "league": "140",
+    "page": "9",
+    "season": "2022"
+  },
+  "errors": [],
+  "results": 20,
+  "paging": {
+    "current": 9,
+    "total": 35
+  },
+  "response": [
+    {
+      "player": {
+        "id": 20,
+        "name": "A. Witsel",
+        "firstname": "Axel Laurent Angel",
+        "lastname": "Lambert Witsel",
+        "age": 33,
+        "birth": {
+          "date": "1989-01-12",
+          "place": "Liège",
+          "country": "Belgium"
+        },
+        "nationality": "Belgium",
+        "height": "186 cm",
+        "weight": "81 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/20.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 530,
+            "name": "Atletico Madrid",
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 13,
+            "lineups": 11,
+            "minutes": 978,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.830769",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 2,
+            "out": 2,
+            "bench": 2
+          },
+          "shots": {
+            "total": 2,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 580,
+            "key": 2,
+            "accuracy": 41
+          },
+          "tackles": {
+            "total": 11,
+            "blocks": 5,
+            "interceptions": 11
+          },
+          "duels": {
+            "total": 57,
+            "won": 34
+          },
+          "dribbles": {
+            "attempts": 3,
+            "success": 3,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 6,
+            "committed": 9
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 39,
+        "name": "S. Savić",
+        "firstname": "Stefan",
+        "lastname": "Savić",
+        "age": 31,
+        "birth": {
+          "date": "1991-01-08",
+          "place": "Mojkovac",
+          "country": "Montenegro"
+        },
+        "nationality": "Montenegro",
+        "height": "187 cm",
+        "weight": "81 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/39.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 530,
+            "name": "Atletico Madrid",
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 9,
+            "lineups": 9,
+            "minutes": 796,
+            "number": null,
+            "position": "Defender",
+            "rating": "6.944444",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 1,
+            "bench": 0
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 442,
+            "key": 1,
+            "accuracy": 42
+          },
+          "tackles": {
+            "total": 14,
+            "blocks": 2,
+            "interceptions": 15
+          },
+          "duels": {
+            "total": 68,
+            "won": 41
+          },
+          "dribbles": {
+            "attempts": 2,
+            "success": 2,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 3,
+            "committed": 13
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 45,
+        "name": "T. Lemar",
+        "firstname": "Thomas",
+        "lastname": "Lemar",
+        "age": 27,
+        "birth": {
+          "date": "1995-11-12",
+          "place": "Baie-Mahault",
+          "country": "Guadeloupe"
+        },
+        "nationality": "France",
+        "height": "171 cm",
+        "weight": "63 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/45.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 530,
+            "name": "Atletico Madrid",
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 8,
+            "lineups": 5,
+            "minutes": 360,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.950000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 3,
+            "out": 5,
+            "bench": 3
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": 2,
+            "saves": null
+          },
+          "passes": {
+            "total": 207,
+            "key": 13,
+            "accuracy": 23
+          },
+          "tackles": {
+            "total": 8,
+            "blocks": 2,
+            "interceptions": 3
+          },
+          "duels": {
+            "total": 41,
+            "won": 19
+          },
+          "dribbles": {
+            "attempts": 11,
+            "success": 6,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 5,
+            "committed": null
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 48,
+        "name": "Saúl",
+        "firstname": "Saúl",
+        "lastname": "Ñíguez Esclapez",
+        "age": 28,
+        "birth": {
+          "date": "1994-11-21",
+          "place": "Elche",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "184 cm",
+        "weight": "76 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/48.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 530,
+            "name": "Atletico Madrid",
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 11,
+            "lineups": 6,
+            "minutes": 464,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.790909",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 5,
+            "out": 5,
+            "bench": 6
+          },
+          "shots": {
+            "total": 5,
+            "on": 4
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 200,
+            "key": 1,
+            "accuracy": 14
+          },
+          "tackles": {
+            "total": 24,
+            "blocks": 1,
+            "interceptions": 8
+          },
+          "duels": {
+            "total": 88,
+            "won": 49
+          },
+          "dribbles": {
+            "attempts": 9,
+            "success": 7,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 2,
+            "committed": 19
+          },
+          "cards": {
+            "yellow": 5,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 50,
+        "name": "Koke",
+        "firstname": "Jorge",
+        "lastname": "Resurrección Merodio",
+        "age": 30,
+        "birth": {
+          "date": "1992-01-08",
+          "place": "Madrid",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "176 cm",
+        "weight": "77 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/50.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 530,
+            "name": "Atletico Madrid",
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 9,
+            "lineups": 8,
+            "minutes": 721,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.877777",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 3,
+            "bench": 1
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": 2,
+            "saves": null
+          },
+          "passes": {
+            "total": 434,
+            "key": 9,
+            "accuracy": 41
+          },
+          "tackles": {
+            "total": 19,
+            "blocks": 4,
+            "interceptions": 1
+          },
+          "duels": {
+            "total": 66,
+            "won": 37
+          },
+          "dribbles": {
+            "attempts": 6,
+            "success": 3,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 11,
+            "committed": 7
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 56,
+        "name": "A. Griezmann",
+        "firstname": "Antoine",
+        "lastname": "Griezmann",
+        "age": 31,
+        "birth": {
+          "date": "1991-03-21",
+          "place": "Mâcon",
+          "country": "France"
+        },
+        "nationality": "France",
+        "height": "176 cm",
+        "weight": "73 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/56.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 530,
+            "name": "Atletico Madrid",
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 13,
+            "lineups": 6,
+            "minutes": 680,
+            "number": null,
+            "position": "Attacker",
+            "rating": "7.330769",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 7,
+            "out": 3,
+            "bench": 7
+          },
+          "shots": {
+            "total": 21,
+            "on": 13
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": 3,
+            "saves": null
+          },
+          "passes": {
+            "total": 351,
+            "key": 19,
+            "accuracy": 22
+          },
+          "tackles": {
+            "total": 14,
+            "blocks": 1,
+            "interceptions": 6
+          },
+          "duels": {
+            "total": 88,
+            "won": 44
+          },
+          "dribbles": {
+            "attempts": 24,
+            "success": 13,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 10,
+            "committed": 6
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 371,
+        "name": "Felipe",
+        "firstname": "Felipe Augusto",
+        "lastname": "de Almeida Monteiro",
+        "age": 33,
+        "birth": {
+          "date": "1989-05-16",
+          "place": "Mogi das Cruzes",
+          "country": "Brazil"
+        },
+        "nationality": "Brazil",
+        "height": "190 cm",
+        "weight": "83 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/371.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 530,
+            "name": "Atletico Madrid",
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 1,
+            "lineups": 1,
+            "minutes": 90,
+            "number": null,
+            "position": "Defender",
+            "rating": "6.700000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 0,
+            "bench": 7
+          },
+          "shots": {
+            "total": 1,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 56,
+            "key": null,
+            "accuracy": 53
+          },
+          "tackles": {
+            "total": 2,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": 9,
+            "won": 4
+          },
+          "dribbles": {
+            "attempts": 2,
+            "success": 1,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 1,
+            "committed": 1
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 583,
+        "name": "João Félix",
+        "firstname": "João Félix",
+        "lastname": "Sequeira",
+        "age": 23,
+        "birth": {
+          "date": "1999-11-10",
+          "place": "Viseu",
+          "country": "Portugal"
+        },
+        "nationality": "Portugal",
+        "height": "181 cm",
+        "weight": "70 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/583.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 530,
+            "name": "Atletico Madrid",
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 12,
+            "lineups": 5,
+            "minutes": 511,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.854545",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 7,
+            "out": 4,
+            "bench": 8
+          },
+          "shots": {
+            "total": 14,
+            "on": 9
+          },
+          "goals": {
+            "total": 3,
+            "conceded": 0,
+            "assists": 3,
+            "saves": null
+          },
+          "passes": {
+            "total": 161,
+            "key": 8,
+            "accuracy": 11
+          },
+          "tackles": {
+            "total": 5,
+            "blocks": null,
+            "interceptions": 3
+          },
+          "duels": {
+            "total": 72,
+            "won": 33
+          },
+          "dribbles": {
+            "attempts": 16,
+            "success": 5,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 17,
+            "committed": 14
+          },
+          "cards": {
+            "yellow": 5,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 753,
+        "name": "Marcos Llorente",
+        "firstname": "Marcos",
+        "lastname": "Llorente Moreno",
+        "age": 27,
+        "birth": {
+          "date": "1995-01-30",
+          "place": "Madrid",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "184 cm",
+        "weight": "74 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/753.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 530,
+            "name": "Atletico Madrid",
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 7,
+            "lineups": 7,
+            "minutes": 574,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "7.100000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 2,
+            "bench": 1
+          },
+          "shots": {
+            "total": 5,
+            "on": 1
+          },
+          "goals": {
+            "total": 1,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 197,
+            "key": 9,
+            "accuracy": 24
+          },
+          "tackles": {
+            "total": 12,
+            "blocks": null,
+            "interceptions": 7
+          },
+          "duels": {
+            "total": 46,
+            "won": 24
+          },
+          "dribbles": {
+            "attempts": 6,
+            "success": 3,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 7,
+            "committed": 9
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 926,
+        "name": "G. Kondogbia",
+        "firstname": "Geoffrey Edwin",
+        "lastname": "Kondogbia",
+        "age": 29,
+        "birth": {
+          "date": "1993-02-15",
+          "place": "Nemours",
+          "country": "France"
+        },
+        "nationality": "Central African Republic",
+        "height": "188 cm",
+        "weight": "80 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/926.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 530,
+            "name": "Atletico Madrid",
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 11,
+            "lineups": 8,
+            "minutes": 719,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.918181",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 3,
+            "out": 4,
+            "bench": 5
+          },
+          "shots": {
+            "total": 8,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 437,
+            "key": 4,
+            "accuracy": 35
+          },
+          "tackles": {
+            "total": 26,
+            "blocks": 1,
+            "interceptions": 19
+          },
+          "duels": {
+            "total": 77,
+            "won": 44
+          },
+          "dribbles": {
+            "attempts": 2,
+            "success": 1,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 7,
+            "committed": 11
+          },
+          "cards": {
+            "yellow": 3,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 2472,
+        "name": "R. De Paul",
+        "firstname": "Rodrigo Javier",
+        "lastname": "De Paul",
+        "age": 28,
+        "birth": {
+          "date": "1994-05-24",
+          "place": "Sarandí",
+          "country": "Argentina"
+        },
+        "nationality": "Argentina",
+        "height": "180 cm",
+        "weight": "70 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/2472.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 530,
+            "name": "Atletico Madrid",
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 11,
+            "lineups": 8,
+            "minutes": 605,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "7.045454",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 3,
+            "out": 7,
+            "bench": 4
+          },
+          "shots": {
+            "total": 4,
+            "on": 2
+          },
+          "goals": {
+            "total": 1,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 362,
+            "key": 15,
+            "accuracy": 27
+          },
+          "tackles": {
+            "total": 8,
+            "blocks": 2,
+            "interceptions": 2
+          },
+          "duels": {
+            "total": 59,
+            "won": 32
+          },
+          "dribbles": {
+            "attempts": 9,
+            "success": 6,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 16,
+            "committed": 8
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 2669,
+        "name": "Hermoso",
+        "firstname": "Mario",
+        "lastname": "Hermoso Canseco",
+        "age": 27,
+        "birth": {
+          "date": "1995-06-18",
+          "place": "Madrid",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "184 cm",
+        "weight": "75 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/2669.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 530,
+            "name": "Atletico Madrid",
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 3,
+            "lineups": 1,
+            "minutes": 120,
+            "number": null,
+            "position": "Defender",
+            "rating": "6.966666",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 2,
+            "out": 0,
+            "bench": 11
+          },
+          "shots": {
+            "total": 1,
+            "on": 1
+          },
+          "goals": {
+            "total": 1,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 68,
+            "key": null,
+            "accuracy": 19
+          },
+          "tackles": {
+            "total": null,
+            "blocks": 2,
+            "interceptions": 3
+          },
+          "duels": {
+            "total": 3,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": 2
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 1,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 2923,
+        "name": "Y. Carrasco",
+        "firstname": "Yannick",
+        "lastname": "Ferreira Carrasco",
+        "age": 29,
+        "birth": {
+          "date": "1993-09-04",
+          "place": "Elsene",
+          "country": "Belgium"
+        },
+        "nationality": "Belgium",
+        "height": "185 cm",
+        "weight": "73 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/2923.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 530,
+            "name": "Atletico Madrid",
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 12,
+            "lineups": 7,
+            "minutes": 681,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.800000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 5,
+            "out": 6,
+            "bench": 6
+          },
+          "shots": {
+            "total": 11,
+            "on": 6
+          },
+          "goals": {
+            "total": 1,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 281,
+            "key": 18,
+            "accuracy": 19
+          },
+          "tackles": {
+            "total": 15,
+            "blocks": 1,
+            "interceptions": 4
+          },
+          "duels": {
+            "total": 79,
+            "won": 36
+          },
+          "dribbles": {
+            "attempts": 25,
+            "success": 15,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 6,
+            "committed": 9
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 6503,
+        "name": "N. Molina",
+        "firstname": "Nahuel",
+        "lastname": "Molina Lucero",
+        "age": 24,
+        "birth": {
+          "date": "1998-04-06",
+          "place": "Embalse",
+          "country": "Argentina"
+        },
+        "nationality": "Argentina",
+        "height": "175 cm",
+        "weight": "70 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/6503.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 530,
+            "name": "Atletico Madrid",
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 10,
+            "lineups": 10,
+            "minutes": 897,
+            "number": null,
+            "position": "Defender",
+            "rating": "6.820000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 1,
+            "bench": 1
+          },
+          "shots": {
+            "total": 2,
+            "on": 1
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 442,
+            "key": 9,
+            "accuracy": 34
+          },
+          "tackles": {
+            "total": 20,
+            "blocks": 1,
+            "interceptions": 4
+          },
+          "duels": {
+            "total": 69,
+            "won": 37
+          },
+          "dribbles": {
+            "attempts": 9,
+            "success": 5,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 5,
+            "committed": 5
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 1
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 22225,
+        "name": "Reinildo",
+        "firstname": "Reinildo Isnard",
+        "lastname": "Mandava",
+        "age": 28,
+        "birth": {
+          "date": "1994-01-21",
+          "place": "Beira",
+          "country": "Mozambique"
+        },
+        "nationality": "Mozambique",
+        "height": "180 cm",
+        "weight": "73 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/22225.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 530,
+            "name": "Atletico Madrid",
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 13,
+            "lineups": 13,
+            "minutes": 1170,
+            "number": null,
+            "position": "Defender",
+            "rating": "7.030769",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 0,
+            "bench": 0
+          },
+          "shots": {
+            "total": 1,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 643,
+            "key": 5,
+            "accuracy": 43
+          },
+          "tackles": {
+            "total": 40,
+            "blocks": 10,
+            "interceptions": 19
+          },
+          "duels": {
+            "total": 134,
+            "won": 76
+          },
+          "dribbles": {
+            "attempts": 10,
+            "success": 2,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 18,
+            "committed": 23
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 162138,
+        "name": "Marco Moreno",
+        "firstname": "Marco",
+        "lastname": "Moreno Ojeda",
+        "age": 21,
+        "birth": {
+          "date": "2001-02-20",
+          "place": "Las Palmas de Gran Canaria",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "192 cm",
+        "weight": null,
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/162138.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 530,
+            "name": "Atletico Madrid",
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 0,
+            "lineups": 0,
+            "minutes": 0,
+            "number": null,
+            "position": "Defender",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 0,
+            "bench": 4
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 287177,
+        "name": "Adrián Corral",
+        "firstname": "Adrián",
+        "lastname": "Corral Alciturri",
+        "age": 19,
+        "birth": {
+          "date": "2003-01-05",
+          "place": "Santander",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "183 cm",
+        "weight": null,
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/287177.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 530,
+            "name": "Atletico Madrid",
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 0,
+            "lineups": 0,
+            "minutes": 0,
+            "number": null,
+            "position": "Defender",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 0,
+            "bench": 1
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 313548,
+        "name": "Alberto Moreno",
+        "firstname": "Alberto",
+        "lastname": "Moreno Rebanal",
+        "age": 20,
+        "birth": {
+          "date": "2002-04-19",
+          "place": "Madrid",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "175 cm",
+        "weight": null,
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/313548.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 530,
+            "name": "Atletico Madrid",
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 0,
+            "lineups": 0,
+            "minutes": 0,
+            "number": null,
+            "position": "Midfielder",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 0,
+            "bench": 2
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 336594,
+        "name": "Pablo Barrios",
+        "firstname": "Pablo",
+        "lastname": "Barrios Rivas",
+        "age": 19,
+        "birth": {
+          "date": "2003-06-15",
+          "place": "Madrid",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "181 cm",
+        "weight": null,
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/336594.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 530,
+            "name": "Atletico Madrid",
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 1,
+            "lineups": 0,
+            "minutes": 19,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.700000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 0,
+            "bench": 2
+          },
+          "shots": {
+            "total": 1,
+            "on": 1
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 26,
+            "key": null,
+            "accuracy": 23
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": 2,
+            "won": 2
+          },
+          "dribbles": {
+            "attempts": 1,
+            "success": 1,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 1,
+            "committed": null
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 336681,
+        "name": "Sergio Díez",
+        "firstname": "Sergio",
+        "lastname": "Díez Roldán",
+        "age": 19,
+        "birth": {
+          "date": "2003-07-28",
+          "place": "Madrid",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "178 cm",
+        "weight": null,
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/336681.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 530,
+            "name": "Atletico Madrid",
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 0,
+            "lineups": 0,
+            "minutes": 0,
+            "number": null,
+            "position": "Defender",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 0,
+            "bench": 7
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1916 @@
+{
+  "get": "players",
+  "parameters": {
+    "league": "140",
+    "page": "18",
+    "season": "2022"
+  },
+  "errors": [],
+  "results": 20,
+  "paging": {
+    "current": 18,
+    "total": 35
+  },
+  "response": [
+    {
+      "player": {
+        "id": 52,
+        "name": "Sergio Camello",
+        "firstname": "Sergio",
+        "lastname": "Camello Pérez",
+        "age": 21,
+        "birth": {
+          "date": "2001-02-10",
+          "place": "Madrid",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "177 cm",
+        "weight": "69 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/52.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 728,
+            "name": "Rayo Vallecano",
+            "logo": "https://media.api-sports.io/football/teams/728.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 12,
+            "lineups": 10,
+            "minutes": 821,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.925000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 2,
+            "out": 8,
+            "bench": 2
+          },
+          "shots": {
+            "total": 20,
+            "on": 7
+          },
+          "goals": {
+            "total": 2,
+            "conceded": 0,
+            "assists": 2,
+            "saves": null
+          },
+          "passes": {
+            "total": 161,
+            "key": 11,
+            "accuracy": 10
+          },
+          "tackles": {
+            "total": 6,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": 73,
+            "won": 31
+          },
+          "dribbles": {
+            "attempts": 14,
+            "success": 6,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 8,
+            "committed": 3
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 119,
+        "name": "R. Falcao",
+        "firstname": "Radamel Falcao",
+        "lastname": "García Zárate",
+        "age": 36,
+        "birth": {
+          "date": "1986-02-10",
+          "place": "Santa Marta",
+          "country": "Colombia"
+        },
+        "nationality": "Colombia",
+        "height": "177 cm",
+        "weight": "72 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/119.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 728,
+            "name": "Rayo Vallecano",
+            "logo": "https://media.api-sports.io/football/teams/728.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 10,
+            "lineups": 2,
+            "minutes": 336,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.590000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 8,
+            "out": 1,
+            "bench": 8
+          },
+          "shots": {
+            "total": 11,
+            "on": 4
+          },
+          "goals": {
+            "total": 2,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 82,
+            "key": 1,
+            "accuracy": 6
+          },
+          "tackles": {
+            "total": 3,
+            "blocks": 1,
+            "interceptions": null
+          },
+          "duels": {
+            "total": 55,
+            "won": 25
+          },
+          "dribbles": {
+            "attempts": 7,
+            "success": 2,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 9,
+            "committed": 8
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 1,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 2814,
+        "name": "P. Rajković",
+        "firstname": "Predrag",
+        "lastname": "Rajković",
+        "age": 27,
+        "birth": {
+          "date": "1995-10-31",
+          "place": "Negotin",
+          "country": "Serbia"
+        },
+        "nationality": "Serbia",
+        "height": "191 cm",
+        "weight": "85 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/2814.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 798,
+            "name": "Mallorca",
+            "logo": "https://media.api-sports.io/football/teams/798.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 13,
+            "lineups": 13,
+            "minutes": 1170,
+            "number": null,
+            "position": "Goalkeeper",
+            "rating": "6.776923",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 0,
+            "bench": 0
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 13,
+            "assists": null,
+            "saves": 30
+          },
+          "passes": {
+            "total": 387,
+            "key": null,
+            "accuracy": 17
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": 7,
+            "won": 4
+          },
+          "dribbles": {
+            "attempts": 3,
+            "success": 2,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 2,
+            "committed": null
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": 1
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 18895,
+        "name": "F. Lejeune",
+        "firstname": "Florian Grégoire",
+        "lastname": "Claude Lejeune",
+        "age": 31,
+        "birth": {
+          "date": "1991-05-20",
+          "place": "Paris",
+          "country": "France"
+        },
+        "nationality": "France",
+        "height": "189 cm",
+        "weight": "89 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/18895.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 728,
+            "name": "Rayo Vallecano",
+            "logo": "https://media.api-sports.io/football/teams/728.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 10,
+            "lineups": 10,
+            "minutes": 771,
+            "number": null,
+            "position": "Defender",
+            "rating": "6.690000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 2,
+            "bench": 1
+          },
+          "shots": {
+            "total": 6,
+            "on": 3
+          },
+          "goals": {
+            "total": 3,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 405,
+            "key": 4,
+            "accuracy": 33
+          },
+          "tackles": {
+            "total": 8,
+            "blocks": 5,
+            "interceptions": 5
+          },
+          "duels": {
+            "total": 47,
+            "won": 30
+          },
+          "dribbles": {
+            "attempts": 3,
+            "success": 3,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 3,
+            "committed": 7
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 1,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 20520,
+        "name": "I. Balliu",
+        "firstname": "Iván",
+        "lastname": "Balliu Campeny",
+        "age": 30,
+        "birth": {
+          "date": "1992-01-01",
+          "place": "Caldas de Malavella",
+          "country": "Spain"
+        },
+        "nationality": "Albania",
+        "height": "172 cm",
+        "weight": "63 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/20520.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 728,
+            "name": "Rayo Vallecano",
+            "logo": "https://media.api-sports.io/football/teams/728.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 12,
+            "lineups": 12,
+            "minutes": 1080,
+            "number": null,
+            "position": "Defender",
+            "rating": "6.858333",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 0,
+            "bench": 0
+          },
+          "shots": {
+            "total": 3,
+            "on": 1
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 520,
+            "key": 15,
+            "accuracy": 35
+          },
+          "tackles": {
+            "total": 13,
+            "blocks": null,
+            "interceptions": 12
+          },
+          "duels": {
+            "total": 56,
+            "won": 34
+          },
+          "dribbles": {
+            "attempts": 3,
+            "success": 2,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 10,
+            "committed": 8
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 41552,
+        "name": "P. Ciss",
+        "firstname": "Pathé Ismaël",
+        "lastname": "Ciss",
+        "age": 28,
+        "birth": {
+          "date": "1994-03-16",
+          "place": "Dakar",
+          "country": "Senegal"
+        },
+        "nationality": "Senegal",
+        "height": "183 cm",
+        "weight": "71 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/41552.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 728,
+            "name": "Rayo Vallecano",
+            "logo": "https://media.api-sports.io/football/teams/728.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 11,
+            "lineups": 6,
+            "minutes": 606,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.836363",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 5,
+            "out": 2,
+            "bench": 6
+          },
+          "shots": {
+            "total": 9,
+            "on": 3
+          },
+          "goals": {
+            "total": 1,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 331,
+            "key": 2,
+            "accuracy": 26
+          },
+          "tackles": {
+            "total": 20,
+            "blocks": 7,
+            "interceptions": 11
+          },
+          "duels": {
+            "total": 82,
+            "won": 40
+          },
+          "dribbles": {
+            "attempts": 3,
+            "success": 1,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 8,
+            "committed": 17
+          },
+          "cards": {
+            "yellow": 3,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 46775,
+        "name": "Salvi",
+        "firstname": "Salvador",
+        "lastname": "Sánchez Ponce",
+        "age": 31,
+        "birth": {
+          "date": "1991-03-30",
+          "place": "El Puerto de Santa María",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "175 cm",
+        "weight": "64 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/46775.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 728,
+            "name": "Rayo Vallecano",
+            "logo": "https://media.api-sports.io/football/teams/728.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 8,
+            "lineups": 3,
+            "minutes": 226,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.625000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 5,
+            "out": 3,
+            "bench": 6
+          },
+          "shots": {
+            "total": 2,
+            "on": 2
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 56,
+            "key": 2,
+            "accuracy": 4
+          },
+          "tackles": {
+            "total": 7,
+            "blocks": null,
+            "interceptions": 2
+          },
+          "duels": {
+            "total": 28,
+            "won": 15
+          },
+          "dribbles": {
+            "attempts": 4,
+            "success": 2,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 5,
+            "committed": 2
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 46914,
+        "name": "E. Saveljich",
+        "firstname": "Esteban Ariel",
+        "lastname": "Saveljich",
+        "age": 31,
+        "birth": {
+          "date": "1991-05-20",
+          "place": "Tandil",
+          "country": "Argentina"
+        },
+        "nationality": "Montenegro",
+        "height": "187 cm",
+        "weight": "80 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/46914.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 728,
+            "name": "Rayo Vallecano",
+            "logo": "https://media.api-sports.io/football/teams/728.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 1,
+            "lineups": 0,
+            "minutes": 0,
+            "number": null,
+            "position": "Defender",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 0,
+            "bench": 11
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 47109,
+        "name": "Óscar Valentín",
+        "firstname": "Óscar Valentín",
+        "lastname": "Martín Luengo",
+        "age": 28,
+        "birth": {
+          "date": "1994-08-20",
+          "place": "Navalmoral de la Mata",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "177 cm",
+        "weight": "72 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/47109.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 728,
+            "name": "Rayo Vallecano",
+            "logo": "https://media.api-sports.io/football/teams/728.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 12,
+            "lineups": 9,
+            "minutes": 780,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.891666",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 3,
+            "out": 7,
+            "bench": 3
+          },
+          "shots": {
+            "total": 2,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 382,
+            "key": 9,
+            "accuracy": 27
+          },
+          "tackles": {
+            "total": 39,
+            "blocks": 5,
+            "interceptions": 14
+          },
+          "duels": {
+            "total": 118,
+            "won": 61
+          },
+          "dribbles": {
+            "attempts": 4,
+            "success": 1,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 12,
+            "committed": 28
+          },
+          "cards": {
+            "yellow": 4,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 47209,
+        "name": "Andrés Martín",
+        "firstname": "Andrés",
+        "lastname": "Martín García",
+        "age": 23,
+        "birth": {
+          "date": "1999-07-11",
+          "place": "Aguadulce",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "177 cm",
+        "weight": "64 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/47209.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 728,
+            "name": "Rayo Vallecano",
+            "logo": "https://media.api-sports.io/football/teams/728.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": null,
+            "lineups": null,
+            "minutes": null,
+            "number": null,
+            "position": "Attacker",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": null,
+            "out": null,
+            "bench": null
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": null,
+            "conceded": null,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": null,
+            "yellowred": null,
+            "red": null
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": null,
+            "missed": null,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 47285,
+        "name": "Unai López",
+        "firstname": "Unai",
+        "lastname": "López Cabrera",
+        "age": 27,
+        "birth": {
+          "date": "1995-10-30",
+          "place": "Errenteria",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "170 cm",
+        "weight": "68 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/47285.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 728,
+            "name": "Rayo Vallecano",
+            "logo": "https://media.api-sports.io/football/teams/728.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 11,
+            "lineups": 5,
+            "minutes": 464,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.700000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 6,
+            "out": 4,
+            "bench": 7
+          },
+          "shots": {
+            "total": 8,
+            "on": 4
+          },
+          "goals": {
+            "total": 1,
+            "conceded": 0,
+            "assists": 2,
+            "saves": null
+          },
+          "passes": {
+            "total": 340,
+            "key": 6,
+            "accuracy": 26
+          },
+          "tackles": {
+            "total": 5,
+            "blocks": 1,
+            "interceptions": 7
+          },
+          "duels": {
+            "total": 41,
+            "won": 16
+          },
+          "dribbles": {
+            "attempts": 3,
+            "success": 3,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 5,
+            "committed": 7
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 47541,
+        "name": "Santi Comesaña",
+        "firstname": "Santiago",
+        "lastname": "Comesaña Veiga",
+        "age": 26,
+        "birth": {
+          "date": "1996-10-05",
+          "place": "Vigo",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "184 cm",
+        "weight": "75 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/47541.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 728,
+            "name": "Rayo Vallecano",
+            "logo": "https://media.api-sports.io/football/teams/728.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 10,
+            "lineups": 6,
+            "minutes": 583,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.660000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 4,
+            "out": 6,
+            "bench": 4
+          },
+          "shots": {
+            "total": 4,
+            "on": 1
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 287,
+            "key": 8,
+            "accuracy": 23
+          },
+          "tackles": {
+            "total": 18,
+            "blocks": 1,
+            "interceptions": 10
+          },
+          "duels": {
+            "total": 81,
+            "won": 42
+          },
+          "dribbles": {
+            "attempts": 11,
+            "success": 6,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 8,
+            "committed": 12
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 47543,
+        "name": "Álvaro García",
+        "firstname": "Álvaro",
+        "lastname": "García Rivera",
+        "age": 30,
+        "birth": {
+          "date": "1992-10-27",
+          "place": "Utrera",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "167 cm",
+        "weight": "61 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/47543.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 728,
+            "name": "Rayo Vallecano",
+            "logo": "https://media.api-sports.io/football/teams/728.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 11,
+            "lineups": 11,
+            "minutes": 926,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.927272",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 6,
+            "bench": 0
+          },
+          "shots": {
+            "total": 13,
+            "on": 10
+          },
+          "goals": {
+            "total": 2,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 249,
+            "key": 11,
+            "accuracy": 16
+          },
+          "tackles": {
+            "total": 15,
+            "blocks": 1,
+            "interceptions": 4
+          },
+          "duels": {
+            "total": 77,
+            "won": 39
+          },
+          "dribbles": {
+            "attempts": 20,
+            "success": 6,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 14,
+            "committed": 14
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 47549,
+        "name": "José Ángel Pozo",
+        "firstname": "José Ángel",
+        "lastname": "Pozo la Rosa",
+        "age": 26,
+        "birth": {
+          "date": "1996-03-15",
+          "place": "Málaga",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "171 cm",
+        "weight": "67 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/47549.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 728,
+            "name": "Rayo Vallecano",
+            "logo": "https://media.api-sports.io/football/teams/728.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 6,
+            "lineups": 1,
+            "minutes": 71,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.416666",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 5,
+            "out": 1,
+            "bench": 10
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 36,
+            "key": 2,
+            "accuracy": 4
+          },
+          "tackles": {
+            "total": 1,
+            "blocks": null,
+            "interceptions": 1
+          },
+          "duels": {
+            "total": 16,
+            "won": 6
+          },
+          "dribbles": {
+            "attempts": 4,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 3,
+            "committed": 2
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 47553,
+        "name": "Bebé",
+        "firstname": "Tiago Manuel",
+        "lastname": "Dias Correia",
+        "age": 32,
+        "birth": {
+          "date": "1990-07-12",
+          "place": "Agualva-Cacém",
+          "country": "Portugal"
+        },
+        "nationality": "Cape Verde",
+        "height": "190 cm",
+        "weight": "83 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/47553.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 728,
+            "name": "Rayo Vallecano",
+            "logo": "https://media.api-sports.io/football/teams/728.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 4,
+            "lineups": 0,
+            "minutes": 56,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.466666",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 4,
+            "out": 0,
+            "bench": 12
+          },
+          "shots": {
+            "total": 2,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 19,
+            "key": 2,
+            "accuracy": 4
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": 17,
+            "won": 5
+          },
+          "dribbles": {
+            "attempts": 7,
+            "success": 3,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 2,
+            "committed": 2
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 47557,
+        "name": "Ó. Trejo",
+        "firstname": "Óscar Guido",
+        "lastname": "Trejo",
+        "age": 34,
+        "birth": {
+          "date": "1988-04-26",
+          "place": "Santiago del Estero",
+          "country": "Argentina"
+        },
+        "nationality": "Argentina",
+        "height": "180 cm",
+        "weight": "79 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/47557.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 728,
+            "name": "Rayo Vallecano",
+            "logo": "https://media.api-sports.io/football/teams/728.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 10,
+            "lineups": 10,
+            "minutes": 758,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.830000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 9,
+            "bench": 0
+          },
+          "shots": {
+            "total": 5,
+            "on": 3
+          },
+          "goals": {
+            "total": 1,
+            "conceded": 0,
+            "assists": 2,
+            "saves": null
+          },
+          "passes": {
+            "total": 322,
+            "key": 15,
+            "accuracy": 26
+          },
+          "tackles": {
+            "total": 11,
+            "blocks": 2,
+            "interceptions": 2
+          },
+          "duels": {
+            "total": 143,
+            "won": 66
+          },
+          "dribbles": {
+            "attempts": 29,
+            "success": 18,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 31,
+            "committed": 27
+          },
+          "cards": {
+            "yellow": 5,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 1,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 122657,
+        "name": "R. Nteka",
+        "firstname": "Randy",
+        "lastname": "Nteka",
+        "age": 25,
+        "birth": {
+          "date": "1997-12-06",
+          "place": "Paris",
+          "country": "France"
+        },
+        "nationality": "France",
+        "height": "189 cm",
+        "weight": "75 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/122657.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 728,
+            "name": "Rayo Vallecano",
+            "logo": "https://media.api-sports.io/football/teams/728.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 6,
+            "lineups": 0,
+            "minutes": 61,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.450000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 6,
+            "out": 0,
+            "bench": 9
+          },
+          "shots": {
+            "total": 1,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 41,
+            "key": null,
+            "accuracy": 5
+          },
+          "tackles": {
+            "total": 2,
+            "blocks": null,
+            "interceptions": 1
+          },
+          "duels": {
+            "total": 14,
+            "won": 9
+          },
+          "dribbles": {
+            "attempts": 4,
+            "success": 1,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 3,
+            "committed": null
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 1
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 131546,
+        "name": "Isi Palazón",
+        "firstname": "Isaac",
+        "lastname": "Palazón Camacho",
+        "age": 28,
+        "birth": {
+          "date": "1994-12-27",
+          "place": "Cieza",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "169 cm",
+        "weight": "71 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/131546.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 728,
+            "name": "Rayo Vallecano",
+            "logo": "https://media.api-sports.io/football/teams/728.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 11,
+            "lineups": 10,
+            "minutes": 849,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "7.163636",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 8,
+            "bench": 1
+          },
+          "shots": {
+            "total": 16,
+            "on": 6
+          },
+          "goals": {
+            "total": 3,
+            "conceded": 0,
+            "assists": 2,
+            "saves": null
+          },
+          "passes": {
+            "total": 344,
+            "key": 15,
+            "accuracy": 26
+          },
+          "tackles": {
+            "total": 16,
+            "blocks": null,
+            "interceptions": 5
+          },
+          "duels": {
+            "total": 130,
+            "won": 58
+          },
+          "dribbles": {
+            "attempts": 22,
+            "success": 7,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 29,
+            "committed": 10
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 1,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 333378,
+        "name": "Diego Méndez",
+        "firstname": "Diego",
+        "lastname": "Méndez Molero",
+        "age": 19,
+        "birth": {
+          "date": "2003-08-29",
+          "place": null,
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": null,
+        "weight": null,
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/333378.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 728,
+            "name": "Rayo Vallecano",
+            "logo": "https://media.api-sports.io/football/teams/728.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 0,
+            "lineups": 0,
+            "minutes": 0,
+            "number": null,
+            "position": "Midfielder",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 0,
+            "bench": 3
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 377197,
+        "name": "Pablo Muñoz",
+        "firstname": "Pablo",
+        "lastname": "Muñoz Crespo",
+        "age": 19,
+        "birth": {
+          "date": "2003-09-04",
+          "place": null,
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": null,
+        "weight": null,
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/377197.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 728,
+            "name": "Rayo Vallecano",
+            "logo": "https://media.api-sports.io/football/teams/728.png"
+          },
+          "league": {
+            "id": 140,
+            "name": "La Liga",
+            "country": "Spain",
+            "logo": "https://media.api-sports.io/football/leagues/140.png",
+            "flag": "https://media.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 2,
+            "lineups": 0,
+            "minutes": 10,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.300000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 2,
+            "out": 0,
+            "bench": 7
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 2,
+            "key": null,
+            "accuracy": 1
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": 6,
+            "won": 1
+          },
+          "dribbles": {
+            "attempts": 1,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 1,
+            "committed": 2
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,7 +1,0 @@
-export * from './screens/InitialPage'
-export * from './screens/Badges'
-export * from './screens/Cards'
-export * from './screens/Profile'
-export * from './screens/Dialogs'
-export * from './components/ThemeButton'
-export * from './components/NavbarButtons'

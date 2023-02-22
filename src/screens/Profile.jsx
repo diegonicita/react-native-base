@@ -12,7 +12,7 @@ export const Profile = ({navigation}) => {
   const [index, setIndex] = React.useState(0);
   
   const handleNavigate = () => {
-    navigation.navigate('Start')
+    navigation.navigate('Home')
     }
 
   return (
