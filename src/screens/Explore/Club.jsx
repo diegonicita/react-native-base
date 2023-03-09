@@ -198,8 +198,8 @@ const styles = StyleSheet.create({
         alignSelf: 'auto'
       },
       default: {
-        width: 412,
-        maxWidth: 640,
+        width: '100%',
+        maxWidth: 1024,
         alignSelf: 'center'
       }
     })

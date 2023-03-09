@@ -46,7 +46,7 @@ export const Login = ({ navigation }) => {
 
   return (
     <>      
-      <ScrollView style={styles.scrollView}>
+      <ScrollView style={styles.scrollView} contentContainerStyle={{alignItems: 'center'}}>
         <Text style={styles.subHeader}> {config.title} </Text>
         <View>
           {/* <Image style={styles.splashImage} source={require('./login.png')} /> */}
@@ -57,12 +57,14 @@ export const Login = ({ navigation }) => {
             color: 'black',
             padding: 24,
             fontWeight: 'bold',
-            alignSelf: 'center'
+            alignSelf: 'flexStart',
+            width: '100%',
+            textAlign: 'center',
           }}
         >
           Ingresar
         </Text>
-        <Formik
+        <Formik          
           validationSchema={loginValidationSchema}
           initialValues={{ username: '', password: '' }}
           onSubmit={(values) => handleSubmit(values)}
@@ -142,9 +144,9 @@ const styles = StyleSheet.create({
         alignSelf: 'auto'
       },
       default: {
-        width: 412,
-        maxWidth: 640,
-        alignSelf: 'center'
+        width: '100%',
+        maxWidth: 1024,
+        alignSelf: 'center',        
       }
     })
   }
@@ -155,7 +157,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingVertical: 5,
     marginBottom: 10,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    width: '100%',
+    alignSelf: 'flex-start'
   },
   splashImage: {
     width: 100,
@@ -167,7 +171,8 @@ const styles = StyleSheet.create({
   textInput: {
     height: 60,
     width: '100%',
-    marginTop: 10,
+    maxWidth: 640,
+    marginTop: 10,    
     marginBotton: 10,
     backgroundColor: 'white',
     borderColor: 'gray',

@@ -24,8 +24,6 @@ export const configStack = {
 
 const images = [
   require('../../assets/robotech.png'),
-  require('../../assets/batistuta.jpg'),
-  require('../../assets/riverboca.jpg'),
   require('../../assets/infootball.png'),
   require('../../assets/cafeapp.png'),
   require('../../assets/cinemaapp.png'),
@@ -72,7 +70,7 @@ export const configHome = {
           english: '2 minutes ago',
           spanish: 'Hace 2 minutos'
         },
-        image: images[3]
+        image: images[1]
       }
     },
     {
@@ -92,7 +90,7 @@ export const configHome = {
           english: '3 minutes ago',
           spanish: 'Hace 3 minutos'
         },
-        image: images[4]
+        image: images[2]
       }
     },
     {
@@ -111,7 +109,7 @@ export const configHome = {
           english: '4 minutes ago',
           spanish: 'Hace 4 minutos'
         },
-        image: images[5]
+        image: images[3]
       }
     },
   ],
@@ -121,17 +119,17 @@ export const configHome = {
       {
         text: {spanish: 'Cafe App: Encuentra un cafe muy cerca tuyo',
         english: 'Cafe App: Find a coffee store next to you'},
-        image: images[4]
+        image: images[2]
       },
       {
         text: {spanish: 'Infooball: Ayuda a los clubes a encontrar las nuevas promesas del futbol',
         english: 'Infooball: Help football clubs to find new players'},
-        image: images[3]
+        image: images[1]
       },
       {
         text: {spanish: 'Cinema App: Compra un ticket para ver tu pelicula favorita',
         english: 'Cinema App: Buy a ticket to your favorite movie'},
-        image: images[5]
+        image: images[3]
       }
     ]
   }

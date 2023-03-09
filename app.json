@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "residenciasmedicas",
-    "slug": "rm-residencias-medicas",
+    "name": "demo-rn",
+    "slug": "mi-demo-react-native",
     "owner": "diegonicita",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -25,14 +25,14 @@
         "foregroundImage": "./src/assets/adaptive-icon-2.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.diegonicita.rmresidenciasmedicas"
+      "package": "com.diegonicita.demorn"
     },
     "web": {
       "favicon": "./src/assets/favicon-2.png"
     },
     "extra": {
       "eas": {
-        "projectId": "fa5ce477-bee6-49ed-8323-7cd8362c6bf7"
+        "projectId": "53bcf968-2872-42e3-ae04-63351eb19825"
       }
     }
   }

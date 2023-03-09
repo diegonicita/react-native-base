@@ -52,8 +52,8 @@ const styles = StyleSheet.create({
         alignSelf: 'auto'
       },
       default: {
-        width: config.webWidth,
-        maxWidth: config.webMaxWidth,
+        // width: config.webWidth,
+        // maxWidth: config.webMaxWidth,
         alignSelf: config.webAlignSelf
       }
     })
