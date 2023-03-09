@@ -1,4 +1,4 @@
-## RM - Residencias Medicas. 
+## Proyecto React Native Base
 #### An React Native App created with React Native Elements Expo Template
 
 This project was created using :
