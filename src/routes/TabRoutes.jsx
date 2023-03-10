@@ -1,62 +1,75 @@
 import React, { useEffect } from 'react'
-import { Explore } from '../screens/Explore/Explore'
-import { Home } from '../screens/Home/Home'
-import { Login } from '../screens/Auth/Login'
-import { MyClub } from '../screens/MyClub/MyClub'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Ionicons from 'react-native-vector-icons/Ionicons'
-import { configTab } from '../screens/_config/config'
+import { StackRoutesHome, StackRoutesExplore, StackRoutesMyClub, StackRoutesAuth } from './StackRoutes'
+import {
+  NavigationContainer,
+  DefaultTheme,
+  DarkTheme
+} from '@react-navigation/native'
+import { useThemeMode } from '@rneui/themed'
 
 const Tab = createBottomTabNavigator()
 
 export const TabRoutes = () => {
 
+  const { setMode, mode } = useThemeMode()
+  useEffect(() => {
+   setMode('default')
+   }, [])
+
+
   return (
-      <Tab.Navigator>      
+    <NavigationContainer theme={mode === 'dark' ? DarkTheme : DefaultTheme}>
+      <Tab.Navigator 
+      screenOptions={{
+        tabBarStyle: {  },
+        }}>      
         <Tab.Screen          
-          name={configTab.name.tab1}
-          component={Home}
+          name="Inicio"
+          component={StackRoutesHome}
           options={{
             headerShown: false,
-            tabBarLabel: configTab.name.tab1,
+            tabBarLabel: 'Inicio',
             tabBarIcon: ({ color, size }) => (
-              <Ionicons name={configTab.icon.tab1} color={color} size={size} />
+              <Ionicons name="home" color={color} size={size} />
             )
-          }}
+            }}            
         />
         <Tab.Screen
-          name={configTab.name.tab2}
-          component={Explore}
+          name="Explorar"
+          component={StackRoutesExplore}
           options={{       
             headerShown: false,                
-            tabBarLabel: configTab.name.tab2,
+            tabBarLabel: 'Explorar',
             tabBarIcon: ({ color, size }) => (
-              <Ionicons name={configTab.icon.tab2} color={color} size={size} />
+              <Ionicons name="search" color={color} size={size} />
             ),            
           }}
         />
         <Tab.Screen
-          name={configTab.name.tab3}
-          component={MyClub}
+          name="Mi Club"
+          component={StackRoutesMyClub}
           options={{
             headerShown: false,
-            tabBarLabel: configTab.name.tab3,
+            tabBarLabel: 'Mi Club',
             tabBarIcon: ({ color, size }) => (
-              <Ionicons name={configTab.icon.tab3} color={color} size={size} />
+              <Ionicons name="people-circle" color={color} size={size} />
             )
           }}
         />
         <Tab.Screen
-          name={configTab.name.tab4}
-          component={Login}
+          name="Perfil"
+          component={StackRoutesAuth}
           options={{
             headerShown: false,
-            tabBarLabel: configTab.name.tab4,
+            tabBarLabel: 'Perfil',
             tabBarIcon: ({ color, size }) => (
-              <Ionicons name={configTab.icon.tab4} color={color} size={size} />
+              <Ionicons name="person" color={color} size={size} />
             )
           }}
         />
       </Tab.Navigator>   
+    </NavigationContainer>
   )
 }

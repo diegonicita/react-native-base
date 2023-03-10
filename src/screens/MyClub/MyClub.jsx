@@ -1,152 +1,106 @@
 import React, { useState, useEffect } from 'react'
-import { Platform, Image, Text, View, ScrollView, StyleSheet } from 'react-native'
-import { Avatar, SearchBar, ListItem } from '@rneui/themed'
-import { ThemeButton } from '../../components/ThemeButton'
+import {
+  Platform,
+  Image,
+  View,
+  ScrollView,
+  StyleSheet,
+  ImageBackground,
+  TouchableOpacity
+} from 'react-native'
+import { Text, Card } from '@rneui/themed'
 import { useThemeMode } from '@rneui/themed'
-import { useDebounce } from 'use-debounce'
 import { useMessageStore } from '../../redux/hooks/useMessage'
-import { useExplore } from '../Explore/useExplore'
+import { useExploreByID } from '../Explore/useExploreByID'
+import { LogoClubCard } from '../Explore/LogoClubCard'
+import { PlayerListCard } from '../Explore/PlayerListCard'
+import { StadiumClubCard } from '../Explore/StadiumClubCard'
 
 const config = {
   title: 'Mi Club'
 }
 
-export const MyClub = ({ navigation }) => {
-  const [search, updateSearch] = useState('')
-  const [searchDebounced] = useDebounce(search, 500)
-  const { isLoading, teamList, teamListFiltered, playerListFiltered } =
-    useExplore(searchDebounced)
-  const { myClub, setMyClub, setClub } = useMessageStore()
-  const { mode } = useThemeMode()
+const images = [
+  require('../../assets/background-002.png'),
+  require('../../assets/background-002-dark.png')
+]
 
-  const handleNavigateToClub = (item) => {
-    setMyClub([
-      item.team.id,
-      item.team.name,
-      item.team.logo,
-      item.team.country,
-      item.team.founded,
-      item.venue.id,
-      item.venue.name,
-      item.venue.address,
-      item.venue.city,
-      item.venue.capacity,
-      item.venue.surface,
-      item.venue.image
-    ])
-    setClub([
-      item.team.id,
-      item.team.name,
-      item.team.logo,
-      item.team.country,
-      item.team.founded,
-      item.venue.id,
-      item.venue.name,
-      item.venue.address,
-      item.venue.city,
-      item.venue.capacity,
-      item.venue.surface,
-      item.venue.image
-    ])
-    navigation.navigate('Club')
+export const MyClub = ({ navigation }) => {
+  const { myClub, setPlayer, login } = useMessageStore()
+  const { mode } = useThemeMode()
+  const { teamListFiltered, playerListFiltered } = useExploreByID(myClub)
+
+  const handleNavigateToLogin = () => {
+    navigation.jumpTo('Perfil')
+    navigation.navigate('Login')
+  }
+
+  const handleNavigateToPlayer = (item) => {
+    setPlayer(item.player.id)
+    navigation.navigate('Player')
   }
 
   return (
-    <>
-      {myClub === null && (
+    <View style={styles.containerBackground}>
+      <ImageBackground
+        source={mode === 'dark' ? images[1] : images[0]}
+        resizeMode="cover"
+        style={styles.imageBackground}
+      >
         <ScrollView style={styles.scrollView}>
-          <Text style={styles.subHeader}> {config.title} </Text>
-          <SearchBar
-            lightTheme={true}
-            onChangeText={updateSearch}
-            value={search}
-            round={true}
-            inputStyle={{
-              color: mode !== 'dark' ? 'black' : 'white',
-              paddingLeft: 15
-            }}
-            containerStyle={{ borderTopWidth: 0, borderBottomWidth: 0 }}
-            placeholderTextColor={mode !== 'dark' ? '#444' : '#BBB'}
-            placeholder="Buscar un Club..."
-          />
-          {!isLoading && (
+          <Text style={styles.header}> {config.title} </Text>
+          {!login && (
             <>
-              <View>
-                {teamListFiltered &&
-                  teamListFiltered.length > 0 &&
-                  teamListFiltered.map((item) => (
-                    <ListItem
-                      key={item.team.id}
-                      bottomDivider
-                      onPress={() => handleNavigateToClub(item)}
-                    >
-                      <Avatar source={{ uri: item.team.logo }} />
-                      <ListItem.Content>
-                        <ListItem.Title>
-                          {item.team.name} ({item.team.code})
-                        </ListItem.Title>
-                        <ListItem.Subtitle>
-                          Country: {item.team.country}. Founded{' '}
-                          {item.team.founded}
-                        </ListItem.Subtitle>
-                      </ListItem.Content>
-                    </ListItem>
-                  ))}
-              </View>
-              <View>
-                {teamListFiltered &&
-                  teamListFiltered.length === 0 &&
-                  search.length < 2 &&
-                  teamList &&
-                  teamList.length > 0 &&
-                  teamList.map((item) => (
-                    <ListItem
-                      key={item.team.id}
-                      bottomDivider
-                      onPress={() => handleNavigateToClub(item)}
-                    >
-                      <Avatar source={{ uri: item.team.logo }} />
-                      <ListItem.Content>
-                        <ListItem.Title>
-                          {item.team.name} ({item.team.code})
-                        </ListItem.Title>
-                        <ListItem.Subtitle>
-                          Country: {item.team.country}. Founded{' '}
-                          {item.team.founded}
-                        </ListItem.Subtitle>
-                      </ListItem.Content>
-                    </ListItem>
-                  ))}
-              </View>
-              {teamListFiltered &&
-                teamListFiltered.length < 1 &&
-                searchDebounced.length > 1 && (
-                  <>
-                    <Text style={{ textAlign: 'center', marginTop: 10 }}>
-                      {search != ''
-                        ? `No se encontraron clubes con el termino '${search}'`
-                        : ''}
-                    </Text>
-                  </>
-                )}
+              <Text style={styles.text}> No estas logueado </Text>
+              <TouchableOpacity onPress={handleNavigateToLogin}>                
+                <Text style={styles.textIniciaSesion}>
+                  ¿Ya tienes una cuenta? ¡Inicia sesion!{' '}
+                </Text>
+              </TouchableOpacity>
             </>
           )}
-          {isLoading && (
-            <Text style={{ textAlign: 'center' }}>
-              Leyendo Informacion... Espero por favor
-            </Text>
+          {login && (
+            <>
+              <LogoClubCard
+                name={teamListFiltered[0]?.team?.name}
+                logo={teamListFiltered[0]?.team?.logo}
+              />
+              <StadiumClubCard
+                name={teamListFiltered[0]?.venue.name}
+                city={teamListFiltered[0]?.venue.city}
+                image={teamListFiltered[0]?.venue?.image}
+                capacity={teamListFiltered[0]?.venue.capacity}
+                surface={teamListFiltered[0]?.venue.surface}
+              />
+              <PlayerListCard
+                list={playerListFiltered}
+                position="Goalkeeper"
+                posicion="Portero"
+                handleNavigateToPlayer={handleNavigateToPlayer}
+              />
+              <PlayerListCard
+                list={playerListFiltered}
+                position="Defender"
+                posicion="Defensa"
+                handleNavigateToPlayer={handleNavigateToPlayer}
+              />
+              <PlayerListCard
+                list={playerListFiltered}
+                position="Midfielder"
+                posicion="Mediocampista"
+                handleNavigateToPlayer={handleNavigateToPlayer}
+              />
+              <PlayerListCard
+                list={playerListFiltered}
+                position="Attacker"
+                posicion="Atacante"
+                handleNavigateToPlayer={handleNavigateToPlayer}
+              />
+            </>
           )}
         </ScrollView>
-      )}
-      {myClub !== null && (
-        <ScrollView style={styles.scrollView}>
-          <Text style={styles.subHeader}> {config.title} </Text>          
-          <Text> {myClub[1]} </Text>
-          <Image style={styles.escudoFoto} source={{ uri: myClub[2] }} />          
-        </ScrollView>
-      )}
-      <ThemeButton />
-    </>
+      </ImageBackground>
+    </View>
   )
 }
 
@@ -160,22 +114,37 @@ const styles = StyleSheet.create({
         alignSelf: 'auto'
       },
       default: {
-        width: 412,
-        maxWidth: 640,
+        width: '100%',
+        maxWidth: 1024,
         alignSelf: 'center'
       }
     })
   },
-  cardTitle: {
-    alignSelf: 'center'
-  },
-  escudoFoto: { width: 100, height: 100, margin: 10 },
-  subHeader: {
-    backgroundColor: '#2089dc',
-    color: 'white',
+  header: {
+    fontSize: 20,
+    backgroundColor: 'lightblue',
     textAlign: 'center',
     paddingVertical: 5,
     marginBottom: 10,
     fontWeight: 'bold'
+  },  
+  text: {
+    textAlign: 'center',
+    lineHeight: 25
+  },
+  textIniciaSesion: { 
+    marginTop: 25,   
+    textAlign: 'center',
+    lineHeight: 25
+  },
+  mainView: {
+    flex: 1
+  },  
+  containerBackground: {
+    flex: 1
+  },
+  imageBackground: {
+    flex: 1,
+    justifyContent: 'center'
   }
 })

@@ -1,35 +1,84 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { TabRoutes } from './TabRoutes';
-import { Splash } from '../screens/Splash'
-import { Settings } from '../screens/Settings'
+import { Home } from '../screens/Home/Home'
+import { Explore } from '../screens/Explore/Explore'
+import { ExploreV2 } from '../screens/Explore/ExploreV2'
 import { Club } from '../screens/Explore/Club'
 import { Player } from '../screens/Explore/Player'
-import {
-    NavigationContainer,
-    DefaultTheme,
-    DarkTheme
-  } from '@react-navigation/native'
+import { MyClub } from '../screens/MyClub/MyClub'
+import { Login } from '../screens/Auth/Login'
+import { Register } from '../screens/Auth/Register'
+import { ThemeButton } from '../components/ThemeButton'
+
 const Stack = createNativeStackNavigator()
-import { useThemeMode } from '@rneui/themed'
-import { configStack } from '../screens/_config/config'
 
-export const StackRoutes =() => {
+const options = { headerStyle: {}, headerRight: () => <ThemeButton /> }
 
-    const { setMode, mode } = useThemeMode()
-    useEffect( ()=> {
-      setMode('default')
-    }, [])  
+export const StackRoutesHome = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen options={options} name="Home" component={Home} />
+    </Stack.Navigator>
+  )
+}
 
-    return (        
-    <NavigationContainer theme={mode === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack.Navigator>
-        <Stack.Screen name={configStack.name.stackTabRoutes} component={TabRoutes} />
-        <Stack.Screen name="Splash" component={Splash} />        
-        <Stack.Screen name="Settings" component={Settings} />
-        <Stack.Screen name="Club" component={Club} />
-        <Stack.Screen name="Player" component={Player} />
-      </Stack.Navigator>
-    </NavigationContainer>
-    );
-  }
+export const StackRoutesExplore = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        options={options}
+        name="Explore"
+        component={ExploreV2}
+      />
+      <Stack.Screen
+        options={options}
+        name="Player"
+        component={Player}
+      />
+      <Stack.Screen
+        options={options}
+        name="Club"
+        component={Club}
+      />
+    </Stack.Navigator>
+  )
+}
+
+export const StackRoutesMyClub = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        options={options}
+        name="MyClub"
+        component={MyClub}
+      />
+      <Stack.Screen
+        options={options}
+        name="Player"
+        component={Player}
+      />
+      <Stack.Screen
+        options={options}
+        name="Club"
+        component={Club}
+      />
+    </Stack.Navigator>
+  )
+}
+
+export const StackRoutesAuth = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        options={options}
+        name="Login"
+        component={Login}
+      />
+      <Stack.Screen
+        options={options}
+        name="Register"
+        component={Register}
+      />
+    </Stack.Navigator>
+  )
+}

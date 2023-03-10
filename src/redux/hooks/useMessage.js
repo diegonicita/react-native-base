@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { onSetMessage, onSetPlayer, onSetClub, onSetMyClub } from '../slices'
+import { onSetMessage, onSetPlayer, onSetClub, onSetMyClub, onSetLogin } from '../slices'
 
 export const useMessageStore = () => {
-  const { message, player, club, myClub } = useSelector((state) => state.message)
+  const { message, player, club, myClub, login } = useSelector((state) => state.message)
   const dispatch = useDispatch()
 
   const setMessage = (msg) => {
@@ -18,16 +18,22 @@ export const useMessageStore = () => {
     dispatch(onSetMyClub(msg))
   }  
 
+  const setLogin = (msg) => {
+    dispatch(onSetLogin(msg))
+  }  
+
   return {
     //* Propiedades
     message,
     player,
     club,
     myClub,
+    login,
     //* Métodos
     setMessage,    
     setPlayer,
     setClub,
-    setMyClub
+    setMyClub,
+    setLogin
   }
 }

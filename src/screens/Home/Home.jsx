@@ -36,8 +36,7 @@ export const Home = () => {
           ))}          
           <CardList list={config.list} />
         </View>
-      </ScrollView>
-      <ThemeButton />
+      </ScrollView>      
     </>
   )
 }
@@ -52,9 +51,9 @@ const styles = StyleSheet.create({
         alignSelf: 'auto'
       },
       default: {
-        // width: config.webWidth,
-        // maxWidth: config.webMaxWidth,
-        alignSelf: config.webAlignSelf
+        width: '100%',
+        maxWidth: 640,
+        alignSelf: 'center'
       }
     })
   },
@@ -67,8 +66,7 @@ const styles = StyleSheet.create({
   },
   subHeader: {
     fontSize: 20,
-    backgroundColor: '#2089dc',
-    color: 'white',
+    backgroundColor: 'lightblue',
     textAlign: 'center',
     paddingVertical: 5,
     marginBottom: 10,

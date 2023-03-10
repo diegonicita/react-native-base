@@ -1,0 +1,22 @@
+{"response": [
+    {
+      "user": {
+        "id": 1,
+        "username": "diego",
+        "firstname": "Diego",
+        "lastname": "Nick3d",
+        "password": "1234567",
+        "club": "529"
+        }
+      },
+      {
+        "user": {
+          "id": 2,
+          "username": "miguel",
+          "firstname": "Migue",
+          "lastname": "FT19",
+          "password": "1234567",
+          "club": "530"
+          }
+        }]
+}

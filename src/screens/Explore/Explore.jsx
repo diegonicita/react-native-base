@@ -1,21 +1,16 @@
-import React, { useState, useEffect, useCallback } from 'react'
-import { Platform, Text, View, ScrollView, StyleSheet } from 'react-native'
+import React, { useState } from 'react'
+import { Platform, View, ScrollView, StyleSheet } from 'react-native'
 import {
-  Avatar,
-  Badge,
-  withBadge,
-  Icon,
-  Button,
+  Avatar,  
+  Text,
   SearchBar,
-  ListItem,
-  Dialog
+  ListItem,  
 } from '@rneui/themed'
-import { ThemeButton } from '../../components/ThemeButton'
 
 import { useThemeMode } from '@rneui/themed'
 import { useDebounce } from 'use-debounce'
 import { useMessageStore } from '../../redux/hooks/useMessage'
-import { useExplore } from './useExplore'
+import { useExploreBySearchTerm } from './useExploreBySearchTerm'
 
 const config = {
   title: 'Explorador'
@@ -25,7 +20,7 @@ export const Explore = ({ navigation }) => {
   
   const [search, updateSearch] = useState('')
   const [searchDebounced] = useDebounce(search, 500)
-  const { isLoading, teamList, playerList, teamListFiltered, playerListFiltered } = useExplore(searchDebounced)
+  const { isLoading, teamList, playerList, teamListFiltered, playerListFiltered } = useExploreBySearchTerm(searchDebounced)
   const { setPlayer, setClub } = useMessageStore()
   const { mode } = useThemeMode()  
  
@@ -167,8 +162,7 @@ export const Explore = ({ navigation }) => {
             Leyendo Informacion... Espero por favor
           </Text>
         )}
-      </ScrollView>
-      <ThemeButton />
+      </ScrollView>      
     </>
   )
 }
@@ -183,8 +177,8 @@ const styles = StyleSheet.create({
         alignSelf: 'auto'
       },
       default: {    
-        width: '100%',    
-        maxWidth: 1024,
+        width: 412,    
+        maxWidth: 640,
         alignSelf: 'center'
       }, 
   })},
@@ -192,8 +186,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   subHeader: {
-    backgroundColor: '#2089dc',
-    color: 'white',
+    backgroundColor: '#2089dc',   
     textAlign: 'center',
     paddingVertical: 5,
     marginBottom: 10,

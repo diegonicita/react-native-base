@@ -1,32 +1,39 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import { Platform, View, ScrollView, StyleSheet, Image } from 'react-native'
-import { Avatar, Divider, Text, Card, Button, withTheme } from '@rneui/themed'
+import { Text, Card } from '@rneui/themed'
 import { useMessageStore } from '../../redux/hooks/useMessage'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { useThemeMode } from '@rneui/themed'
+import { useExplorePlayerByID } from './useExplorePlayerByID'
 
-const d = {
-  id: 0,
-  name: 1,
-  firstname: 2,
-  lastname: 3,
-  age: 4,
-  birthdate: 5,
-  birthplace: 6,
-  birthcountry: 7,
-  nationality: 8,
-  height: 9,
-  weight: 10,
-  injured: 11,
-  photo: 12,
-  team: 13,
-  logoteam: 14
+const config = {
+  title: 'Player'
 }
 
-export const Player = ( {navigation}) => {
-  const { player } = useMessageStore()
+export const Player = ({ navigation }) => {
+  const { player: playerID } = useMessageStore()
   const [isFavorite, setIsFavorite] = useState(false)
   const { mode } = useThemeMode()
+  const { isLoading, playerListFiltered } = useExplorePlayerByID(playerID)
+
+  const p = {
+    id: playerID,
+    name: playerListFiltered[0]?.player.name,
+    firstname: playerListFiltered[0]?.player.firstname,
+    lastname: playerListFiltered[0]?.player.lastname,
+    photo: playerListFiltered[0]?.player?.photo,
+    club: playerListFiltered[0]?.statistics[0].team.name,
+    logo: playerListFiltered[0]?.statistics[0].team.logo,
+    age: playerListFiltered[0]?.player.age,
+    nationality: playerListFiltered[0]?.player.nationality,
+    birthDate: playerListFiltered[0]?.player.birth.date,
+    birthPlace: playerListFiltered[0]?.player.birth.place,
+    birthCountry: playerListFiltered[0]?.player.birth.country,
+    injured: playerListFiltered[0]?.player.injured ? 'Si' : 'No',
+    weight: playerListFiltered[0]?.player.weight,
+    height: playerListFiltered[0]?.player.height
+  }
+
   const handleFavorite = () => {
     setIsFavorite((previous) => setIsFavorite(!previous))
   }
@@ -34,8 +41,9 @@ export const Player = ( {navigation}) => {
   return (
     <>
       <ScrollView style={styles.scrollView}>
-        <Card>
-          <Card.Title style={styles.cardTitle}>{player[d.name]}</Card.Title>
+        <Text style={styles.subHeader}> {config.title} </Text>
+        <Card wrapperStyle={styles.cardWrapper} containerStyle={styles.card}>
+          <Card.Title style={styles.cardTitle}>{p.name}</Card.Title>
           <Ionicons
             style={styles.iconFavorite}
             name={isFavorite ? 'heart' : 'heart-outline'}
@@ -44,34 +52,26 @@ export const Player = ( {navigation}) => {
             onPress={handleFavorite}
           />
           <View style={styles.view}>
-            <Image style={styles.image} source={{ uri: player[d.photo] }} />
+            <Image style={styles.image} source={{ uri: p.photo }} />
           </View>
         </Card>
-        <Card>
-          <Card.Title style={styles.cardTitle}>Club: {player[d.team]}</Card.Title>
+        <Card wrapperStyle={styles.cardWrapper} containerStyle={styles.card}>
+          <Card.Title style={styles.cardTitle}>Club: {p.club}</Card.Title>
           <View style={styles.view}>
-            <Image style={styles.imageEscudo} source={{ uri: player[d.logoteam] }} />
+            <Image style={styles.imageEscudo} source={{ uri: p.logo }} />
           </View>
         </Card>
-        <Card>
-          <Text style={styles.text}>Nombres: {player[d.firstname]}</Text>
-          <Text style={styles.text}>Apellidos: {player[d.lastname]}</Text>
-          <Text style={styles.text}>Edad: {player[d.age]}</Text>
-          <Text style={styles.text}>Pais: {player[d.nationality]} </Text>
-          <Text style={styles.text}>
-            Fecha de Nacimiento: {player[d.birthdate]}
-          </Text>
-          <Text style={styles.text}>
-            Lugar de Nacimiento: {player[d.birthplace]}
-          </Text>
-          <Text style={styles.text}>
-            Pais de Nacimiento: {player[d.birthcountry]}
-          </Text>
-          <Text style={styles.text}>Peso: {player[d.weight]}</Text>
-          <Text style={styles.text}>Altura: {player[d.height]}</Text>
-          <Text style={styles.text}>
-            Lesionado: {player[d.injured] ? 'Si' : 'No'}
-          </Text>
+        <Card wrapperStyle={styles.cardWrapper} containerStyle={styles.card}>
+          <Text style={styles.text}>Nombres: {p.firstname} </Text>
+          <Text style={styles.text}>Apellidos: {p.lastname} </Text>
+          <Text style={styles.text}>Edad: {p.age} </Text>
+          <Text style={styles.text}>Nacionalidad: {p.nationality}</Text>
+          <Text style={styles.text}>Fecha de Nacimiento: {p.birthDate} </Text>
+          <Text style={styles.text}>Lugar de Nacimiento: {p.birthPlace} </Text>
+          <Text style={styles.text}>Pais de Nacimiento: {p.birthCountry} </Text>
+          <Text style={styles.text}>Peso: {p.weight}</Text>
+          <Text style={styles.text}>Altura: {p.height}</Text>
+          <Text style={styles.text}>Lesionado: {p.injured}</Text>
         </Card>
         <View style={styles.viewBottom}></View>
       </ScrollView>
@@ -80,7 +80,7 @@ export const Player = ( {navigation}) => {
 }
 
 const styles = StyleSheet.create({
-  scrollView: {
+  scrollView: {    
     ...Platform.select({
       ios: {
         alignSelf: 'auto'
@@ -89,8 +89,8 @@ const styles = StyleSheet.create({
         alignSelf: 'auto'
       },
       default: {
-        width: 412,
-        maxWidth: 640,
+        width: '100%',
+        maxWidth: 1024,
         alignSelf: 'center'
       }
     })
@@ -103,6 +103,19 @@ const styles = StyleSheet.create({
   imageEscudo: { width: 50, height: 50, margin: 5 },
   mainView: {
     flex: 1
+  },
+  subHeader: {
+    backgroundColor: '#2089dc',    
+    textAlign: 'center',
+    paddingVertical: 5,
+    marginBottom: 10,
+    fontWeight: 'bold'
+  },
+  card: {   
+    borderColor: '#2089dc55',
+    borderRadius: 5
+  },
+  cardWrapper: {    
   },
   view: {
     justifyContent: 'center',
