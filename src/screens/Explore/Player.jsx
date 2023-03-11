@@ -5,6 +5,8 @@ import { useMessageStore } from '../../redux/hooks/useMessage'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { useThemeMode } from '@rneui/themed'
 import { useExplorePlayerByID } from './useExplorePlayerByID'
+import { Header } from '../../components/Header'
+import { CustomScrollView } from '../../components/CustomScrollView'
 
 const config = {
   title: 'Player'
@@ -40,8 +42,8 @@ export const Player = ({ navigation }) => {
 
   return (
     <>
-      <ScrollView style={styles.scrollView}>
-        <Text style={styles.subHeader}> {config.title} </Text>
+      <CustomScrollView>
+        <Header title={config.title} />
         <Card wrapperStyle={styles.cardWrapper} containerStyle={styles.card}>
           <Card.Title style={styles.cardTitle}>{p.name}</Card.Title>
           <Ionicons
@@ -74,27 +76,12 @@ export const Player = ({ navigation }) => {
           <Text style={styles.text}>Lesionado: {p.injured}</Text>
         </Card>
         <View style={styles.viewBottom}></View>
-      </ScrollView>
+      </CustomScrollView>
     </>
   )
 }
 
-const styles = StyleSheet.create({
-  scrollView: {    
-    ...Platform.select({
-      ios: {
-        alignSelf: 'auto'
-      },
-      android: {
-        alignSelf: 'auto'
-      },
-      default: {
-        width: '100%',
-        maxWidth: 1024,
-        alignSelf: 'center'
-      }
-    })
-  },
+const styles = StyleSheet.create({  
   text: {
     textAlign: 'center',
     lineHeight: 25
@@ -103,13 +90,6 @@ const styles = StyleSheet.create({
   imageEscudo: { width: 50, height: 50, margin: 5 },
   mainView: {
     flex: 1
-  },
-  subHeader: {
-    backgroundColor: '#2089dc',    
-    textAlign: 'center',
-    paddingVertical: 5,
-    marginBottom: 10,
-    fontWeight: 'bold'
   },
   card: {   
     borderColor: '#2089dc55',

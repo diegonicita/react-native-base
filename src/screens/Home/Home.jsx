@@ -5,71 +5,48 @@ import { BigCard } from './BigCard'
 import { LittleCard } from './LittleCard'
 import { CardList } from './CardList'
 import { ThemeButton } from '../../components/ThemeButton'
+import { Header } from '../../components/Header'
+import { CustomScrollView } from '../../components/CustomScrollView'
 
 import { configHome as config } from '../_config/config'
 
 export const Home = () => {
   return (
-    <>
-      <ScrollView style={styles.scrollView}>
-        <Text style={styles.subHeader}> {config.title} </Text>
-        <View>
-          {config.bigCard.map((item, index) => (
-            <BigCard
-              key={index}
-              title={item.title.english}
-              newsTitle={item.news.text.english}
-              author={item.news.author}
-              minutes={item.news.time.english}
-              image={item.news.image}
-            />
-          ))}
-          {config.bigCard.map((item, index) => (
-            <LittleCard
-              key={index}
-              title={item.title.english}
-              newsTitle={item.news.text.english}
-              author={item.news.author}
-              minutes={item.news.time.english}
-              image={item.news.image}
-            />
-          ))}          
-          <CardList list={config.list} />
-        </View>
-      </ScrollView>      
-    </>
+    <CustomScrollView>
+      <Header title={config.title} />
+      <View>
+        {config.bigCard.map((item, index) => (
+          <BigCard
+            key={index}
+            title={item.title.english}
+            newsTitle={item.news.text.english}
+            author={item.news.author}
+            minutes={item.news.time.english}
+            image={item.news.image}
+          />
+        ))}
+        {config.bigCard.map((item, index) => (
+          <LittleCard
+            key={index}
+            title={item.title.english}
+            newsTitle={item.news.text.english}
+            author={item.news.author}
+            minutes={item.news.time.english}
+            image={item.news.image}
+          />
+        ))}
+        <CardList list={config.list} />
+      </View>
+    </CustomScrollView>
   )
 }
 
 const styles = StyleSheet.create({
-  scrollView: {
-    ...Platform.select({
-      ios: {
-        alignSelf: 'auto'
-      },
-      android: {
-        alignSelf: 'auto'
-      },
-      default: {
-        width: '100%',
-        maxWidth: 640,
-        alignSelf: 'center'
-      }
-    })
-  },
   buttonStyle: {
     borderRadius: 3,
     marginTop: 5,
     marginLeft: 5,
     marginRight: 5,
     marginBottom: 5
-  },
-  subHeader: {
-    fontSize: 20,
-    backgroundColor: 'lightblue',
-    textAlign: 'center',
-    paddingVertical: 5,
-    marginBottom: 10,
-    fontWeight: 'bold'
-  },
+  }
 })

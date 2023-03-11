@@ -18,7 +18,7 @@ const theme = createTheme({
     background: 'black',
     white: 'black',
     black: 'white'
-  },
+  },  
   mode: 'light'
 })
 
@@ -26,7 +26,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-        <TabRoutes />
+        <TabRoutes/>
       </ThemeProvider>
     </Provider>
   )

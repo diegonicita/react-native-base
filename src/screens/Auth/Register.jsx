@@ -1,68 +1,23 @@
-import { Platform } from 'react-native'
 import { useState } from 'react'
 import { Picker } from '@react-native-picker/picker'
-import { useThemeMode } from '@rneui/themed'
-import { Text } from '@rneui/themed'
-import {
-  StyleSheet,
-  View,
-  TextInput,
-  TouchableOpacity,
-  ScrollView,
-  ImageBackground
-} from 'react-native'
+import { useThemeMode, Text } from '@rneui/themed'
+import { StyleSheet, View, TextInput, TouchableOpacity } from 'react-native'
 
 import { Formik } from 'formik'
-import * as yup from 'yup'
 import { useMessageStore } from '../../redux/hooks/useMessage'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useExploreByID } from '../Explore/useExploreByID'
+import { registerValidationSchema } from './registerValidation'
+// Components
+import { Header } from '../../components/Header'
+import { Footer } from '../../components/Footer'
+import { CustomScrollView } from '../../components/CustomScrollView'
+import { CustomBackgroundView } from '../../components/CustomBackgroundView'
 
 const images = [
   require('../../assets/background-001.png'),
   require('../../assets/background-001-dark.png')
 ]
-
-const loginValidationSchema = yup.object().shape({
-  username: yup
-    .string()
-    .min(
-      3,
-      ({ min }) =>
-        `Nombre de usuario muy corto. Debe tener al menos ${min} caracteres!`
-    )
-    .required('El campo no debe estar vacío'),
-  firstname: yup
-    .string()
-    .min(
-      3,
-      ({ min }) => `Nombre muy corto. Debe tener al menos ${min} caracteres!`
-    )
-    .required('El campo no debe estar vacío'),
-  lastname: yup
-    .string()
-    .min(
-      3,
-      ({ min }) => `Apellido muy corto. Debe tener al menos ${min} caracteres!`
-    )
-    .required('El campo no debe estar vacío'),
-  password: yup
-    .string()
-    .min(7, ({ min }) => `Tu password debe tener al menos ${min} caracteres`)
-    .required('El campo no debe estar vacío'),
-  password2: yup
-    .string()
-    .min(7, ({ min }) => `Tu password debe tener al menos ${min} caracteres`)
-    .required('El campo no debe estar vacío')
-    .oneOf([yup.ref('password'), null], 'Tus passwords no coinciden'),
-  miclub: yup
-    .string()
-    .min(
-      3,
-      ({ min }) => `Club muy corto. Debe tener al menos ${min} caracteres!`
-    )
-    .required('El campo no debe estar vacío')
-})
 
 const config = {
   title: 'Regístrate'
@@ -104,16 +59,12 @@ export const Register = ({ navigation }) => {
   }
 
   return (
-    <View style={styles.containerBackground}>
-      {/* <ImageBackground
-        source={mode === 'dark' ? images[1] : images[0]}
-        resizeMode="cover"
-        style={styles.imageBackground}
-      > */}
-        <ScrollView style={styles.scrollView}>
-          <Text style={styles.subHeader}> {config.title} </Text>
+    <>
+      <CustomBackgroundView image1={images[1]} image2={images[0]} mode={mode}>
+        <CustomScrollView>
+          <Header title={config.title} />
           <Formik
-            validationSchema={loginValidationSchema}
+            validationSchema={registerValidationSchema}
             initialValues={{
               username: '',
               password: '',
@@ -287,49 +238,21 @@ export const Register = ({ navigation }) => {
                     </Text>
                   </TouchableOpacity>
                 )}
-                {!isLoading && (
-                  <View style={styles.footer}>
-                    <Text style={styles.politica}>Politica de Privacidad</Text>
-                    <Text style={styles.terminos}>Terminos y Condiciones</Text>
-                  </View>
-                )}
               </View>
             )}
           </Formik>
-        </ScrollView>
-      {/* </ImageBackground> */}
-    </View>
+         <Footer />
+        </CustomScrollView>
+      </CustomBackgroundView>
+    </>
   )
 }
 
 const styles = StyleSheet.create({
-  scrollView: {
-    ...Platform.select({
-      ios: {
-        alignSelf: 'auto'
-      },
-      android: {
-        alignSelf: 'auto'
-      },
-      default: {
-        width: '100%',
-        maxWidth: 1024,
-        alignSelf: 'center'
-      }
-    })
-  },
-  subHeader: {
-    fontSize: 20,
-    backgroundColor: 'lightblue',
-    textAlign: 'center',
-    paddingVertical: 5,
-    marginBottom: 10,
-    fontWeight: 'bold'
-  },
   textInput: {
     height: 40,
-    width: '90%',   
-    maxWidth: 640, 
+    width: '90%',
+    maxWidth: 640,
     marginTop: 10,
     marginBotton: 10,
     backgroundColor: 'white',
@@ -339,9 +262,9 @@ const styles = StyleSheet.create({
     padding: 10
   },
   buttonContainer: {
-    width: '90%',    
+    width: '90%',
     marginTop: 30,
-    maxWidth: 640,
+    maxWidth: 640
   },
   button: {
     fontWeight: 'bold',
@@ -361,27 +284,9 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start'
   },
   iniciaSesion: {
+    marginBottom: 40,
     fontWeight: 'bold',
     alignSelf: 'flex-start'
-  },
-  footer: {
-    paddingTop: 16,
-    flexDirection: 'row'
-  },
-  politica: {
-    padding: 16,
-    fontSize: 12
-  },
-  terminos: {
-    padding: 16,
-    fontSize: 12
-  },
-  containerBackground: {
-    flex: 1
-  },
-  imageBackground: {
-    flex: 1,
-    justifyContent: 'center'
   },
   picker: {
     height: 40,
@@ -393,6 +298,6 @@ const styles = StyleSheet.create({
     borderColor: 'gray',
     borderWidth: StyleSheet.hairlineWidth,
     borderRadius: 5,
-    padding: 10,
+    padding: 10
   }
 })

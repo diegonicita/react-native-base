@@ -1,41 +1,28 @@
 import React, { useState, useEffect } from 'react'
-import { Platform } from 'react-native'
-import { Text } from '@rneui/themed'
-import { useThemeMode } from '@rneui/themed'
+import { useThemeMode, Text } from '@rneui/themed'
 import {
   StyleSheet,
   View,
   TextInput,
-  TouchableOpacity,
-  ScrollView,
-  ImageBackground
+  TouchableOpacity  
 } from 'react-native'
 
 import { Formik } from 'formik'
-import * as yup from 'yup'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useMessageStore } from '../../redux/hooks/useMessage'
-
 import usersFromJSON from './helpers/dataJSON/users.json'
+import { loginValidationSchema } from './loginValidation'
+
+// Components
+import { Header } from '../../components/Header'
+import { Footer } from '../../components/Footer'
+import { CustomScrollView } from '../../components/CustomScrollView'
+import { CustomBackgroundView } from '../../components/CustomBackgroundView'
+
 const images = [
   require('../../assets/background-001.png'),
   require('../../assets/background-001-dark.png')
 ]
-
-const loginValidationSchema = yup.object().shape({
-  username: yup
-    .string()
-    .min(
-      3,
-      ({ min }) =>
-        `Nombre de usuario muy corto. Debe tener al menos ${min} caracteres!`
-    )
-    .required('El campo no debe estar vacio'),
-  password: yup
-    .string()
-    .min(7, ({ min }) => `Tu password debe tener al menos ${min} caracteres`)
-    .required('El campo no debe estar vacio')
-})
 
 const config = {
   title: 'Iniciar Sesión'
@@ -104,151 +91,112 @@ export const Login = ({ navigation }) => {
   }
 
   return (
-    <View style={styles.containerBackground}>
-      {/* <ImageBackground
-        source={mode === 'dark' ? images[1] : images[0]}
-        resizeMode="cover"
-        style={styles.imageBackground}
-      > */}
-        <ScrollView style={styles.scrollView}>
-          <Text style={styles.subHeader}>
-            {' '}
-            {login ? 'Bienvenido' : config.title}{' '}
-          </Text>
-          <Formik
-            validationSchema={loginValidationSchema}
-            initialValues={{ username: '', password: '' }}
-            onSubmit={(values) => handleSubmit(values)}
-          >
-            {({
-              handleChange,
-              handleBlur,
-              handleSubmit,
-              values,
-              touched,
-              errors,
-              isValid
-            }) => (
-              <View style={{ alignItems: 'center' }}>
-                {!isSubmmiting && !login && (
-                  <>
-                    <View style={styles.labelContainer}>
-                      <Text style={styles.label}>Usuario</Text>
-                    </View>
-                    <TextInput
-                      name="username"
-                      placeholder="Escribe tu nombre de usuario"
-                      style={styles.textInput}
-                      onChangeText={handleChange('username')}
-                      onBlur={handleBlur('username')}
-                      value={values.username}
-                      keyboardType="default"
-                      autoCapitalize="none"
-                    />
-                  </>
-                )}
-                {errors.username && touched.username && (
-                  <Text style={{ fontSize: 16, color: 'red', padding: 5 }}>
-                    {errors.username}
-                  </Text>
-                )}
-                {!isSubmmiting && !login && (
-                  <>
-                    <View style={styles.labelContainer}>
-                      <Text style={styles.label}>Contraseña</Text>
-                    </View>
-                    <TextInput
-                      name="password"
-                      placeholder="Ingresa tu contraseña"
-                      style={styles.textInput}
-                      onChangeText={handleChange('password')}
-                      onBlur={handleBlur('password')}
-                      value={values.password}
-                      autoCapitalize="none"
-                      secureTextEntry
-                    />
-                  </>
-                )}
-                {errors.password && touched.password && (
-                  <Text style={{ fontSize: 16, color: 'red', padding: 5 }}>
-                    {errors.password}
-                  </Text>
-                )}
-                {serverStatus === 401 && (
-                  <Text style={styles.error}>
-                    Usuario o Contraseña inválida
-                  </Text>
-                )}
-                {!isSubmmiting && !login && (
-                  <TouchableOpacity
-                    style={styles.buttonContainer}
-                    onPress={(values) => handleSubmit(values)}
-                  >
-                    <Text style={styles.button}>Ingresar</Text>
-                  </TouchableOpacity>
-                )}
-                {!isSubmmiting && !login && (
-                  <View>
-                    <Text> </Text>
-                    <Text> </Text>
-                  </View>
-                )}
+    <CustomBackgroundView image1={images[1]} image2={images[0]} mode={mode}>
+      <CustomScrollView>
+        <Header title={login ? 'Bienvenido' : config.title} />
 
-                {!isSubmmiting && !login && (
-                  <TouchableOpacity onPress={handleNavigateToRegister}>
-                    <Text style={styles.registrate}>
-                      ¿No tienes una cuenta? Registrate{' '}
-                    </Text>
-                  </TouchableOpacity>
-                )}
-                {!isSubmmiting && !login && (
-                  <View style={styles.footer}>
-                    <Text style={styles.copyright}>Copyright Diego Nicita</Text>
-                    <Text style={styles.alcance}>Alcance Tech 2023</Text>
+        <Formik
+          validationSchema={loginValidationSchema}
+          initialValues={{ username: '', password: '' }}
+          onSubmit={(values) => handleSubmit(values)}
+        >
+          {({
+            handleChange,
+            handleBlur,
+            handleSubmit,
+            values,
+            touched,
+            errors,
+            isValid
+          }) => (
+            <View style={{ alignItems: 'center' }}>
+              {!isSubmmiting && !login && (
+                <>
+                  <View style={styles.labelContainer}>
+                    <Text style={styles.label}>Usuario</Text>
                   </View>
-                )}
-                {!isSubmmiting && login && (
-                  <>
-                    <Text style={styles.success}>Logueo Exitoso.</Text>
-                    <TouchableOpacity onPress={handleLogout}>
-                      <Text>¿ Quieres cerrar sesion ? Haz clic aqui</Text>
-                    </TouchableOpacity>
-                  </>
-                )}
-              </View>
-            )}
-          </Formik>
-        </ScrollView>
-      {/* </ImageBackground> */}
-    </View>
+                  <TextInput
+                    name="username"
+                    placeholder="Escribe tu nombre de usuario"
+                    style={styles.textInput}
+                    onChangeText={handleChange('username')}
+                    onBlur={handleBlur('username')}
+                    value={values.username}
+                    keyboardType="default"
+                    autoCapitalize="none"
+                  />
+                </>
+              )}
+              {errors.username && touched.username && (
+                <Text style={{ fontSize: 16, color: 'red', padding: 5 }}>
+                  {errors.username}
+                </Text>
+              )}
+              {!isSubmmiting && !login && (
+                <>
+                  <View style={styles.labelContainer}>
+                    <Text style={styles.label}>Contraseña</Text>
+                  </View>
+                  <TextInput
+                    name="password"
+                    placeholder="Ingresa tu contraseña"
+                    style={styles.textInput}
+                    onChangeText={handleChange('password')}
+                    onBlur={handleBlur('password')}
+                    value={values.password}
+                    autoCapitalize="none"
+                    secureTextEntry
+                  />
+                </>
+              )}
+              {errors.password && touched.password && (
+                <Text style={{ fontSize: 16, color: 'red', padding: 5 }}>
+                  {errors.password}
+                </Text>
+              )}
+              {serverStatus === 401 && (
+                <Text style={styles.error}>Usuario o Contraseña inválida</Text>
+              )}
+              {!isSubmmiting && !login && (
+                <TouchableOpacity
+                  style={styles.buttonContainer}
+                  onPress={(values) => handleSubmit(values)}
+                >
+                  <Text style={styles.button}>Ingresar</Text>
+                </TouchableOpacity>
+              )}
+              {!isSubmmiting && !login && (
+                <View>
+                  <Text> </Text>
+                  <Text> </Text>
+                </View>
+              )}
+
+              {!isSubmmiting && !login && (
+                <TouchableOpacity onPress={handleNavigateToRegister}>
+                  <Text style={styles.registrate}>
+                    ¿No tienes una cuenta? Registrate{' '}
+                  </Text>
+                </TouchableOpacity>
+              )}              
+              {!isSubmmiting && login && (
+                <>
+                  <Text style={styles.success}>Logueo Exitoso.</Text>
+                  <TouchableOpacity onPress={handleLogout}>
+                    <Text>¿ Quieres cerrar sesion ? Haz clic aqui</Text>
+                  </TouchableOpacity>
+                </>
+              )}
+            </View>
+          )}
+        </Formik>        
+        <Footer />              
+      </CustomScrollView>
+    </CustomBackgroundView>
   )
 }
 
 const styles = StyleSheet.create({
-  scrollView: {
-    flex: 1,
-    ...Platform.select({
-      ios: {
-        alignSelf: 'auto'
-      },
-      android: {
-        alignSelf: 'auto'
-      },
-      default: {
-        width: '100%',
-        maxWidth: 1024,
-        alignSelf: 'center'
-      }
-    })
-  },
-  subHeader: {
-    fontSize: 20,
-    backgroundColor: 'lightblue',
-    textAlign: 'center',
-    paddingVertical: 5,
-    marginBottom: 10,
-    fontWeight: 'bold'
-  },
   textInput: {
     maxWidth: 640,
     height: 40,
@@ -264,10 +212,10 @@ const styles = StyleSheet.create({
   buttonContainer: {
     width: '90%',
     marginTop: 30,
-    maxWidth: 640,
+    maxWidth: 640
   },
   button: {
-    fontWeight: 'bold',    
+    fontWeight: 'bold',
     backgroundColor: 'lightblue',
     padding: 12,
     borderRadius: 5,
@@ -276,17 +224,17 @@ const styles = StyleSheet.create({
   },
   labelContainer: {
     width: '90%',
-    maxWidth: 640,
+    maxWidth: 640
   },
   label: {
     paddingTop: 16,
     fontWeight: 'bold',
     alignSelf: 'flex-start'
-    
   },
   registrate: {
     fontWeight: 'bold',
-    alignSelf: 'center'
+    alignSelf: 'center',
+    marginBottom: 40,
   },
   success: {
     marginTop: 20,
@@ -303,13 +251,6 @@ const styles = StyleSheet.create({
     marginTop: 20,
     fontWeight: 'bold',
     alignSelf: 'center'
-  },
-  containerBackground: {
-    flex: 1
-  },
-  imageBackground: {
-    flex: 1,
-    justifyContent: 'center'
   },
   footer: {
     paddingTop: 16,

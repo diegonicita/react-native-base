@@ -7,6 +7,8 @@ import { ClubSkeleton } from './ClubSkeleton'
 import { LogoClubCard } from './LogoClubCard'
 import { StadiumClubCard } from './StadiumClubCard'
 import { PlayerListCard } from './PlayerListCard'
+import { Header } from '../../components/Header'
+import { CustomScrollView } from '../../components/CustomScrollView'
 
 const config = {
   title: 'Club'
@@ -27,10 +29,10 @@ export const Club = ({ navigation }) => {
   }
 
   return (
-    <ScrollView style={styles.scrollView}>
+    <CustomScrollView>
       {isLoaded && (
         <>
-          <Text style={styles.subHeader}> {config.title} </Text>
+          <Header title={config.title} />
           <LogoClubCard
             name={teamListFiltered[0]?.team?.name}
             logo={teamListFiltered[0]?.team?.logo}
@@ -76,33 +78,11 @@ export const Club = ({ navigation }) => {
           onLoad={handleLoaded}
         />
       </>
-    </ScrollView>
+    </CustomScrollView>
   )
 }
 
-const styles = StyleSheet.create({
-  scrollView: {
-    ...Platform.select({
-      ios: {
-        alignSelf: 'auto'
-      },
-      android: {
-        alignSelf: 'auto'
-      },
-      default: {
-        width: '100%',
-        maxWidth: 1024,
-        alignSelf: 'center'
-      }
-    })
-  },
-  subHeader: {
-    backgroundColor: '#2089dc',
-    textAlign: 'center',
-    paddingVertical: 5,
-    marginBottom: 10,
-    fontWeight: 'bold'
-  },
+const styles = StyleSheet.create({  
   card: {
     borderColor: '#2089dc55',
     borderRadius: 5

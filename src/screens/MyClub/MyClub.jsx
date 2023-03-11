@@ -15,6 +15,7 @@ import { useExploreByID } from '../Explore/useExploreByID'
 import { LogoClubCard } from '../Explore/LogoClubCard'
 import { PlayerListCard } from '../Explore/PlayerListCard'
 import { StadiumClubCard } from '../Explore/StadiumClubCard'
+import { Header } from '../../components/Header'
 
 const config = {
   title: 'Mi Club'
@@ -48,7 +49,7 @@ export const MyClub = ({ navigation }) => {
         style={styles.imageBackground}
       >
         <ScrollView style={styles.scrollView}>
-          <Text style={styles.header}> {config.title} </Text>
+          <Header title={config.title} />
           {!login && (
             <>
               <Text style={styles.text}> No estas logueado </Text>
@@ -119,14 +120,6 @@ const styles = StyleSheet.create({
         alignSelf: 'center'
       }
     })
-  },
-  header: {
-    fontSize: 20,
-    backgroundColor: 'lightblue',
-    textAlign: 'center',
-    paddingVertical: 5,
-    marginBottom: 10,
-    fontWeight: 'bold'
   },  
   text: {
     textAlign: 'center',
