@@ -13,13 +13,13 @@ import { configHome as config } from '../_config/config'
 export const Home = () => {
   return (
     <CustomScrollView>
+       <View>
       <Header title={config.title} />
-      <View>
         {config.bigCard.map((item, index) => (
           <BigCard
             key={index}
             title={item.title.english}
-            newsTitle={item.news.text.english}
+            text={item.news.text.english}
             author={item.news.author}
             minutes={item.news.time.english}
             image={item.news.image}
@@ -29,12 +29,12 @@ export const Home = () => {
           <LittleCard
             key={index}
             title={item.title.english}
-            newsTitle={item.news.text.english}
+            text={item.news.text.english}
             author={item.news.author}
             minutes={item.news.time.english}
             image={item.news.image}
           />
-        ))}
+        ))} 
         <CardList list={config.list} />
       </View>
     </CustomScrollView>

@@ -75,6 +75,7 @@ export const ExploreV2 = ({ navigation }) => {
       />
       {!isLoading && (
         <FlatList
+          keyboardShouldPersistTaps="always"
           nestedScrollEnabled={true}
           data={listFiltered}
           renderItem={({ item }) => (

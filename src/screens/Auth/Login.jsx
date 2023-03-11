@@ -252,16 +252,4 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     alignSelf: 'center'
   },
-  footer: {
-    paddingTop: 16,
-    flexDirection: 'row'
-  },
-  copyright: {
-    padding: 16,
-    fontSize: 12
-  },
-  alcance: {
-    padding: 16,
-    fontSize: 12
-  }
 })

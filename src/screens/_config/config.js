@@ -61,9 +61,9 @@ export const configHome = {
       },
       news: {
         text: {
-          english: 'A Mobile Application to manage soccer scouting',
+          english: 'A Mobile Application to manage soccer scouting. Soccer scouting is the process of searching, identifying, and evaluating potential football talents for a team or club.',
           spanish:
-            'Una aplicacion mobil para administrar el scouting de jugadores de futbol'
+            'Una aplicacion mobil para administrar el scouting de jugadores de futbol. El soccer scouting es el proceso que les permite buscar, identificar y evaluar a estos jugadores potenciales en diferentes niveles para mejorar la calidad y el rendimiento del equipo.'
         },
         author: 'Diego',
         time: {
@@ -76,12 +76,12 @@ export const configHome = {
     {
       title: {
         english:
-          'Coffee App - A Single Page Application',
+          'Coffee App - A Single Page Application.',
         spanish: 'Infootball - App desarrollada con react native'
       },
       news: {
         text: {
-          english: 'A Single Page Application to help people find and rate coffee shops',
+          english: 'A Single Page Application to help people find and rate coffee shops. Coffee is one of the most popular beverages in the world. Its consumption is widespread and deeply rooted in many cultures. The unique aroma, taste, and stimulating effects of coffee make it a favorite drink for millions of people around the globe.',
           spanish:
             'Una Single Page App para encontrar cafeterias y calificarlas'
         },
@@ -100,7 +100,7 @@ export const configHome = {
       },
       news: {
         text: {
-          english: 'A Mobile Application to manage the ticket sales of a cinema',
+          english: 'A Mobile Application to manage the ticket sales of a cinema. Movie-going is a popular entertainment activity worldwide. Many people enjoy the immersive experience of watching films on the big screen with high-quality sound and visuals.',
           spanish:
             'Una aplicacion mobil para administrar la venta de entradas para un cine'
         },
