@@ -1,7 +1,13 @@
 import { useState } from 'react'
 import { Picker } from '@react-native-picker/picker'
 import { useThemeMode, Text } from '@rneui/themed'
-import { StyleSheet, View, TextInput, TouchableOpacity, Image } from 'react-native'
+import {
+  StyleSheet,
+  View,
+  TextInput,
+  TouchableOpacity,
+  Image
+} from 'react-native'
 
 import { Formik } from 'formik'
 import { useMessageStore } from '../../redux/hooks/useMessage'
@@ -26,7 +32,8 @@ const config = {
 export const Register = ({ navigation }) => {
   const [isLoading, setIsLoading] = useState(false)
   const [selectedClub, setSelectedClub] = useState('Barca')
-  const { login, setLogin, setMyClub, setUserCounter } = useMessageStore()
+  const { setIsLogged, setMyClub, setUserCounter, setUserLogged } =
+    useMessageStore()
   const { isLoading: isLoadingTeams, teamList } = useExploreByID(null)
   const { mode } = useThemeMode()
 
@@ -48,7 +55,14 @@ export const Register = ({ navigation }) => {
       lastname: values.lastname,
       club: values.miclub
     })
-    setLogin(true)
+    setIsLogged(true)
+    setUserLogged([
+      3,
+      values.username,
+      values.firstname,
+      values.lastname,
+      values.miclub
+    ])
     setMyClub(values.miclub)
     setUserCounter(3)
     setIsLoading(false)
@@ -244,7 +258,10 @@ export const Register = ({ navigation }) => {
             )}
           </Formik>
           <View style={styles.imageContainer}>
-            <Image style={styles.image} source={mode === 'dark'?images[1]:images[0]} />
+            <Image
+              style={styles.image}
+              source={mode === 'dark' ? images[1] : images[0]}
+            />
           </View>
           <Footer />
         </CustomScrollView>

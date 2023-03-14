@@ -34,7 +34,8 @@ export const Login = ({ navigation }) => {
   const [isLoadingData, setIsLoadingData] = useState(true)
   const [userList, setUserList] = useState([])
   const [serverStatus, setServerStatus] = useState(0)
-  const { login, setLogin, setMyClub, userCounter } = useMessageStore()
+  const { isLogged, setIsLogged, setMyClub, userCounter, setUserLogged } =
+    useMessageStore()
   const { mode } = useThemeMode()
 
   useEffect(() => {
@@ -54,9 +55,7 @@ export const Login = ({ navigation }) => {
     }
     addDataFromStorage()
     setIsLoadingData(false)
-  }, [userCounter])
-
-  // console.log(userList)
+  }, [userCounter])  
 
   const handleSubmit = async (values) => {
     setIsSubmmiting(true)
@@ -65,17 +64,24 @@ export const Login = ({ navigation }) => {
     )
     if (listaFiltrada.length !== 0) {
       if (listaFiltrada[0].user.password === values.password) {
-        setLogin(true)
+        setIsLogged(true)
+        setUserLogged([
+          listaFiltrada[0].user.id,
+          listaFiltrada[0].user.username,
+          listaFiltrada[0].user.firstname,
+          listaFiltrada[0].user.lastname,
+          listaFiltrada[0].user.club,          
+        ])
         setMyClub(listaFiltrada[0].user.club)
         setServerStatus(200) // Ok
       } else {
-        setLogin(false)
+        setIsLogged(false)
         setMyClub(null)
         setServerStatus(401)
         setTimeout(() => setServerStatus(0), 1000) // unauthorized
       }
     } else {
-      setLogin(false)
+      setIsLogged(false)
       setMyClub(null)
       setServerStatus(401) // unauthorized
       setTimeout(() => setServerStatus(0), 1000) // unauthorized
@@ -87,15 +93,11 @@ export const Login = ({ navigation }) => {
     navigation.navigate('Register')
   }
 
-  const handleLogout = () => {
-    setLogin(null)
-  }
-
   return (
     <CustomBackgroundView mode={mode}>
       {/* <CustomBackgroundView image1={images[1]} image2={images[0]} mode={mode}> */}
       <CustomScrollView>
-        <Header title={login ? 'Bienvenido' : config.title} />
+        <Header title={config.title} />
 
         <Formik
           validationSchema={loginValidationSchema}
@@ -112,7 +114,7 @@ export const Login = ({ navigation }) => {
             isValid
           }) => (
             <View style={{ alignItems: 'center' }}>
-              {!isSubmmiting && !login && (
+              {!isSubmmiting && !isLogged && (
                 <>
                   <View style={styles.labelContainer}>
                     <Text style={styles.label}>Usuario</Text>
@@ -134,7 +136,7 @@ export const Login = ({ navigation }) => {
                   {errors.username}
                 </Text>
               )}
-              {!isSubmmiting && !login && (
+              {!isSubmmiting && !isLogged && (
                 <>
                   <View style={styles.labelContainer}>
                     <Text style={styles.label}>Contraseña</Text>
@@ -159,7 +161,7 @@ export const Login = ({ navigation }) => {
               {serverStatus === 401 && (
                 <Text style={styles.error}>Usuario o Contraseña inválida</Text>
               )}
-              {!isSubmmiting && !login && (
+              {!isSubmmiting && !isLogged && (
                 <TouchableOpacity
                   style={styles.buttonContainer}
                   onPress={(values) => handleSubmit(values)}
@@ -167,28 +169,20 @@ export const Login = ({ navigation }) => {
                   <Text style={styles.button}>Ingresar</Text>
                 </TouchableOpacity>
               )}
-              {!isSubmmiting && !login && (
+              {!isSubmmiting && !isLogged && (
                 <View>
                   <Text> </Text>
                   <Text> </Text>
                 </View>
               )}
 
-              {!isSubmmiting && !login && (
+              {!isSubmmiting && !isLogged && (
                 <TouchableOpacity onPress={handleNavigateToRegister}>
                   <Text style={styles.registrate}>
                     ¿No tienes una cuenta? Registrate{' '}
                   </Text>
                 </TouchableOpacity>
-              )}
-              {!isSubmmiting && login && (
-                <View style={styles.containerSuccess}>
-                  <Text style={styles.success}>Logueo Exitoso.</Text>
-                  <TouchableOpacity onPress={handleLogout}>
-                    <Text>¿ Quieres cerrar sesion ? Haz clic aqui</Text>
-                  </TouchableOpacity>
-                </View>
-              )}
+              )}              
             </View>
           )}
         </Formik>
@@ -244,22 +238,8 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginBottom: 40
   },
-  containerSuccess: {    
-    marginBottom: 40,
-  },
-  success: {
-    marginTop: 20,
-    color: 'green',
-    fontWeight: 'bold',
-    alignSelf: 'center'
-  },
   error: {
     color: 'red',
-    fontWeight: 'bold',
-    alignSelf: 'center'
-  },
-  logout: {
-    marginTop: 20,
     fontWeight: 'bold',
     alignSelf: 'center'
   },

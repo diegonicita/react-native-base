@@ -8,8 +8,9 @@ export const messageSlice = createSlice({
     club: null,
     myClub: null,
     myPlayer: null,
-    login: null,
-    userCounter: null
+    isLogged: null,
+    userCounter: null,
+    userLogged: null,
   },
   reducers: {
     onSetMessage(state, action) {
@@ -27,11 +28,14 @@ export const messageSlice = createSlice({
     onSetMyPlayer(state, action) {
       state.myPlayer = action.payload
     },
-    onSetLogin(state, action) {
-      state.login = action.payload
+    onSetIsLogged(state, action) {
+      state.isLogged = action.payload
     },
     onSetUserCounter(state, action) {
       state.userCounter = action.payload
+    },
+    onSetUserLogged(state, action) {
+      state.userLogged = action.payload
     }
   }
 })
@@ -42,6 +46,7 @@ export const {
   onSetClub,
   onSetMyClub,
   onSetMyPlayer,
-  onSetLogin,
-  onSetUserCounter
+  onSetIsLogged,
+  onSetUserCounter,
+  onSetUserLogged
 } = messageSlice.actions

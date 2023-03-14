@@ -4,7 +4,7 @@
         "id": 1,
         "username": "diego",
         "firstname": "Diego",
-        "lastname": "Nick3d",
+        "lastname": "Nicita",
         "password": "1234567",
         "club": "529"
         }
@@ -13,8 +13,8 @@
         "user": {
           "id": 2,
           "username": "miguel",
-          "firstname": "Migue",
-          "lastname": "FT19",
+          "firstname": "Miguel",
+          "lastname": "Fernandez",
           "password": "1234567",
           "club": "530"
           }

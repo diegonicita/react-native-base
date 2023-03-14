@@ -5,12 +5,13 @@ import {
   onSetClub,
   onSetMyClub,
   onSetMyPlayer,
-  onSetLogin,
-  onSetUserCounter
+  onSetIsLogged,
+  onSetUserCounter,
+  onSetUserLogged,
 } from '../slices'
 
 export const useMessageStore = () => {
-  const { message, player, club, myClub, login, userCounter, myPlayer } =
+  const { message, player, club, myClub, isLogged, userCounter, myPlayer, userLogged } =
     useSelector((state) => state.message)
   const dispatch = useDispatch()
 
@@ -29,11 +30,15 @@ export const useMessageStore = () => {
   const setMyPlayer = (msg) => {
     dispatch(onSetMyPlayer(msg))
   }
-  const setLogin = (msg) => {
-    dispatch(onSetLogin(msg))
+  const setIsLogged = (msg) => {
+    dispatch(onSetIsLogged(msg))
   }
   const setUserCounter = (msg) => {
     dispatch(onSetUserCounter(msg))
+  }
+
+  const setUserLogged = (msg) => {
+    dispatch(onSetUserLogged(msg))
   }
 
   return {
@@ -43,15 +48,17 @@ export const useMessageStore = () => {
     club,
     myClub,
     myPlayer,
-    login,
+    isLogged,
     userCounter,
+    userLogged,
     //* Métodos
     setMessage,
     setPlayer,
     setClub,
     setMyClub,
     setMyPlayer,
-    setLogin,
-    setUserCounter
+    setIsLogged,
+    setUserCounter,
+    setUserLogged
   }
 }

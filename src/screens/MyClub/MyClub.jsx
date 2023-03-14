@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import {
-  Platform,  
+  Platform,
+  Image,
   View,
   ScrollView,
   StyleSheet,
   ImageBackground,
   TouchableOpacity
 } from 'react-native'
-import { Text } from '@rneui/themed'
+import { Text, Card } from '@rneui/themed'
 import { useThemeMode } from '@rneui/themed'
 import { useMessageStore } from '../../redux/hooks/useMessage'
 import { useExploreByID } from '../Explore/useExploreByID'
@@ -26,7 +27,7 @@ const images = [
 ]
 
 export const MyClub = ({ navigation }) => {
-  const { myClub, setMyPlayer, login } = useMessageStore()
+  const { myClub, setMyPlayer, isLogged } = useMessageStore()
   const { mode } = useThemeMode()
   const { teamListFiltered, playerListFiltered } = useExploreByID(myClub)
 
@@ -48,7 +49,7 @@ export const MyClub = ({ navigation }) => {
       >
         <ScrollView style={styles.scrollView}>
           <Header title={config.title} />
-          {!login && (
+          {!isLogged && (
             <>
               <Text style={styles.text}> No estas logueado </Text>
               <TouchableOpacity onPress={handleNavigateToLogin}>                
@@ -58,7 +59,7 @@ export const MyClub = ({ navigation }) => {
               </TouchableOpacity>
             </>
           )}
-          {login && (
+          {isLogged && (
             <>
               <LogoClubCard
                 name={teamListFiltered[0]?.team?.name}
