@@ -12,19 +12,16 @@ export const LittleCard = (props) => {
       if (nuevaLongitud === -1) {
         return texto.substring(0, large)
       } else {
-        return texto.substring(0, nuevaLongitud) + '(Continue reading...)'
+        return texto.substring(0, nuevaLongitud) + ' (Continue reading...)'
       }
     }
   }
 
   return (
-    <Card style={{justifyContent: 'center'}}>
-      <View style={styles.cardTitleContainer}>
+    <Card style={{justifyContent: 'center'}}>      
         <Card.Title style={styles.cardTitle}>
           <Ionicons name="bonfire" color="red" size={16} /> {props.title}
         </Card.Title>
-    
-      </View>
       <Card.Divider color="gray" />
       <View style={styles.container}>
         <Text style={styles.text}>
@@ -42,20 +39,11 @@ export const LittleCard = (props) => {
 }
 
 const styles = StyleSheet.create({
-  cardTitleContainer: {    
-    flexDirection: 'row',    
-    backgroundColor: 'darkgreen',     
-    flexWrap: 'wrap'     
-  },
-  cardTitleEmpty: {    
-    flexBasis: 60,
-    backgroundColor: 'darkgreen', 
-    color: 'white',
-    flexGrow: 0,  
-  },
-  cardTitle: {     
-    flexGrow: 1,   
-    backgroundColor: 'lightgreen',       
+  cardTitleContainer: {        
+    
+  },  
+  cardTitle: {             
+    
   },
   container: {
     flexDirection: 'row',

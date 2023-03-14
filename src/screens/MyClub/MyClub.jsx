@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import {
-  Platform,
-  Image,
+  Platform,  
   View,
   ScrollView,
   StyleSheet,
   ImageBackground,
   TouchableOpacity
 } from 'react-native'
-import { Text, Card } from '@rneui/themed'
+import { Text } from '@rneui/themed'
 import { useThemeMode } from '@rneui/themed'
 import { useMessageStore } from '../../redux/hooks/useMessage'
 import { useExploreByID } from '../Explore/useExploreByID'
@@ -27,18 +26,17 @@ const images = [
 ]
 
 export const MyClub = ({ navigation }) => {
-  const { myClub, setPlayer, login } = useMessageStore()
+  const { myClub, setMyPlayer, login } = useMessageStore()
   const { mode } = useThemeMode()
   const { teamListFiltered, playerListFiltered } = useExploreByID(myClub)
 
   const handleNavigateToLogin = () => {
-    navigation.jumpTo('Perfil')
-    navigation.navigate('Login')
+    navigation.jumpTo('Perfil', {screen: 'Login'})    
   }
 
   const handleNavigateToPlayer = (item) => {
-    setPlayer(item.player.id)
-    navigation.navigate('Player')
+    setMyPlayer(item.player.id)
+    navigation.navigate('MyPlayer')
   }
 
   return (

@@ -5,6 +5,7 @@ import { ExploreV2 } from '../screens/Explore/ExploreV2'
 import { Club } from '../screens/Explore/Club'
 import { Player } from '../screens/Explore/Player'
 import { MyClub } from '../screens/MyClub/MyClub'
+import { MyPlayer } from '../screens/MyClub/MyPlayer'
 import { Login } from '../screens/Auth/Login'
 import { Register } from '../screens/Auth/Register'
 import { ThemeButton } from '../components/ThemeButton'
@@ -53,14 +54,9 @@ export const StackRoutesMyClub = () => {
       />
       <Stack.Screen
         options={options}
-        name="Player"
-        component={Player}
-      />
-      <Stack.Screen
-        options={options}
-        name="Club"
-        component={Club}
-      />
+        name="MyPlayer"
+        component={MyPlayer}
+      />      
     </Stack.Navigator>
   )
 }

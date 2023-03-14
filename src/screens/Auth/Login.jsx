@@ -4,7 +4,8 @@ import {
   StyleSheet,
   View,
   TextInput,
-  TouchableOpacity  
+  TouchableOpacity,
+  Image
 } from 'react-native'
 
 import { Formik } from 'formik'
@@ -20,8 +21,8 @@ import { CustomScrollView } from '../../components/CustomScrollView'
 import { CustomBackgroundView } from '../../components/CustomBackgroundView'
 
 const images = [
-  require('../../assets/background-001.png'),
-  require('../../assets/background-001-dark.png')
+  require('../../assets/soccer-player-001.png'),
+  require('../../assets/soccer-player-001-dark.png')
 ]
 
 const config = {
@@ -33,7 +34,7 @@ export const Login = ({ navigation }) => {
   const [isLoadingData, setIsLoadingData] = useState(true)
   const [userList, setUserList] = useState([])
   const [serverStatus, setServerStatus] = useState(0)
-  const { login, setLogin, setMyClub } = useMessageStore()
+  const { login, setLogin, setMyClub, userCounter } = useMessageStore()
   const { mode } = useThemeMode()
 
   useEffect(() => {
@@ -53,7 +54,7 @@ export const Login = ({ navigation }) => {
     }
     addDataFromStorage()
     setIsLoadingData(false)
-  }, [setUserList])
+  }, [userCounter])
 
   // console.log(userList)
 
@@ -91,7 +92,8 @@ export const Login = ({ navigation }) => {
   }
 
   return (
-    <CustomBackgroundView image1={images[1]} image2={images[0]} mode={mode}>
+    <CustomBackgroundView mode={mode}>
+      {/* <CustomBackgroundView image1={images[1]} image2={images[0]} mode={mode}> */}
       <CustomScrollView>
         <Header title={login ? 'Bienvenido' : config.title} />
 
@@ -118,7 +120,7 @@ export const Login = ({ navigation }) => {
                   <TextInput
                     name="username"
                     placeholder="Escribe tu nombre de usuario"
-                    style={styles.textInput}
+                    style={styles.input}
                     onChangeText={handleChange('username')}
                     onBlur={handleBlur('username')}
                     value={values.username}
@@ -140,7 +142,7 @@ export const Login = ({ navigation }) => {
                   <TextInput
                     name="password"
                     placeholder="Ingresa tu contraseña"
-                    style={styles.textInput}
+                    style={styles.input}
                     onChangeText={handleChange('password')}
                     onBlur={handleBlur('password')}
                     value={values.password}
@@ -178,34 +180,40 @@ export const Login = ({ navigation }) => {
                     ¿No tienes una cuenta? Registrate{' '}
                   </Text>
                 </TouchableOpacity>
-              )}              
+              )}
               {!isSubmmiting && login && (
-                <>
+                <View style={styles.containerSuccess}>
                   <Text style={styles.success}>Logueo Exitoso.</Text>
                   <TouchableOpacity onPress={handleLogout}>
                     <Text>¿ Quieres cerrar sesion ? Haz clic aqui</Text>
                   </TouchableOpacity>
-                </>
+                </View>
               )}
             </View>
           )}
-        </Formik>        
-        <Footer />              
+        </Formik>
+        <View style={styles.imageContainer}>
+          <Image
+            style={styles.image}
+            source={mode === 'dark' ? images[1] : images[0]}
+          />
+        </View>
+        <Footer />
       </CustomScrollView>
     </CustomBackgroundView>
   )
 }
 
 const styles = StyleSheet.create({
-  textInput: {
+  input: {
     maxWidth: 640,
     height: 40,
     width: '90%',
     marginTop: 10,
-    marginBotton: 10,
+    marginBottom: 10,
     backgroundColor: 'white',
     borderColor: 'gray',
-    borderWidth: StyleSheet.hairlineWidth,
+    borderWidth: 1,
     borderRadius: 5,
     padding: 10
   },
@@ -234,6 +242,9 @@ const styles = StyleSheet.create({
   registrate: {
     fontWeight: 'bold',
     alignSelf: 'center',
+    marginBottom: 40
+  },
+  containerSuccess: {    
     marginBottom: 40,
   },
   success: {
@@ -252,4 +263,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     alignSelf: 'center'
   },
+  imageContainer: {
+    alignContent: 'flex-start',
+    justifyContent: 'flex-start'
+  },
+  image: {
+    width: '100%',
+    height: 350,
+    resizeMode: 'cover'
+  }
 })

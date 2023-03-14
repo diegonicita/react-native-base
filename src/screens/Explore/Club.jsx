@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { Platform, View, ScrollView, StyleSheet, Image } from 'react-native'
-import { Avatar, Text, Card, ListItem } from '@rneui/themed'
+import React, { useState } from 'react'
+import { StyleSheet, Image } from 'react-native'
 import { useMessageStore } from '../../redux/hooks/useMessage'
 import { useExploreByID } from './useExploreByID'
 import { ClubSkeleton } from './ClubSkeleton'

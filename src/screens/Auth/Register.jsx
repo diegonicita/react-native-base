@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Picker } from '@react-native-picker/picker'
 import { useThemeMode, Text } from '@rneui/themed'
-import { StyleSheet, View, TextInput, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, TextInput, TouchableOpacity, Image } from 'react-native'
 
 import { Formik } from 'formik'
 import { useMessageStore } from '../../redux/hooks/useMessage'
@@ -15,8 +15,8 @@ import { CustomScrollView } from '../../components/CustomScrollView'
 import { CustomBackgroundView } from '../../components/CustomBackgroundView'
 
 const images = [
-  require('../../assets/background-001.png'),
-  require('../../assets/background-001-dark.png')
+  require('../../assets/soccer-player-001.png'),
+  require('../../assets/soccer-player-001-dark.png')
 ]
 
 const config = {
@@ -26,7 +26,7 @@ const config = {
 export const Register = ({ navigation }) => {
   const [isLoading, setIsLoading] = useState(false)
   const [selectedClub, setSelectedClub] = useState('Barca')
-  const { login, setLogin, setMyClub } = useMessageStore()
+  const { login, setLogin, setMyClub, setUserCounter } = useMessageStore()
   const { isLoading: isLoadingTeams, teamList } = useExploreByID(null)
   const { mode } = useThemeMode()
 
@@ -50,6 +50,7 @@ export const Register = ({ navigation }) => {
     })
     setLogin(true)
     setMyClub(values.miclub)
+    setUserCounter(3)
     setIsLoading(false)
     handleNavigateToLogin()
   }
@@ -60,7 +61,8 @@ export const Register = ({ navigation }) => {
 
   return (
     <>
-      <CustomBackgroundView image1={images[1]} image2={images[0]} mode={mode}>
+      <CustomBackgroundView mode={mode}>
+        {/* </CustomBackgroundView><CustomBackgroundView image1={images[1]} image2={images[0]} mode={mode}> */}
         <CustomScrollView>
           <Header title={config.title} />
           <Formik
@@ -93,7 +95,7 @@ export const Register = ({ navigation }) => {
                   <TextInput
                     name="firstname"
                     placeholder="Ingresa tu nombre"
-                    style={styles.textInput}
+                    style={styles.input}
                     onChangeText={handleChange('firstname')}
                     onBlur={handleBlur('firstname')}
                     value={values.firstname}
@@ -109,7 +111,7 @@ export const Register = ({ navigation }) => {
                   <TextInput
                     name="lastname"
                     placeholder="Ingresa tu apellido"
-                    style={styles.textInput}
+                    style={styles.input}
                     onChangeText={handleChange('lastname')}
                     onBlur={handleBlur('lastname')}
                     value={values.lastname}
@@ -128,7 +130,7 @@ export const Register = ({ navigation }) => {
                   <TextInput
                     name="username"
                     placeholder="Escribe tu nombre de usuario"
-                    style={styles.textInput}
+                    style={styles.input}
                     onChangeText={handleChange('username')}
                     onBlur={handleBlur('username')}
                     value={values.username}
@@ -148,7 +150,7 @@ export const Register = ({ navigation }) => {
                   <TextInput
                     name="password"
                     placeholder="Usa 7 caracteres como minimo"
-                    style={styles.textInput}
+                    style={styles.input}
                     onChangeText={handleChange('password')}
                     onBlur={handleBlur('password')}
                     value={values.password}
@@ -165,7 +167,7 @@ export const Register = ({ navigation }) => {
                   <TextInput
                     name="password2"
                     placeholder="Repite tu contraseña"
-                    style={styles.textInput}
+                    style={styles.input}
                     onChangeText={handleChange('password2')}
                     onBlur={handleBlur('password2')}
                     value={values.password2}
@@ -185,7 +187,7 @@ export const Register = ({ navigation }) => {
                 <TextInput
                   name="miclub"
                   placeholder="Elige tu Club"
-                  style={styles.textInput}
+                  style={styles.input}
                   onChangeText={handleChange('miclub')}
                   onBlur={handleBlur('miclub')}
                   value={values.miclub}
@@ -241,7 +243,10 @@ export const Register = ({ navigation }) => {
               </View>
             )}
           </Formik>
-         <Footer />
+          <View style={styles.imageContainer}>
+            <Image style={styles.image} source={mode === 'dark'?images[1]:images[0]} />
+          </View>
+          <Footer />
         </CustomScrollView>
       </CustomBackgroundView>
     </>
@@ -249,15 +254,15 @@ export const Register = ({ navigation }) => {
 }
 
 const styles = StyleSheet.create({
-  textInput: {
+  input: {
     height: 40,
     width: '90%',
     maxWidth: 640,
     marginTop: 10,
-    marginBotton: 10,
+    marginBottom: 10,
     backgroundColor: 'white',
     borderColor: 'gray',
-    borderWidth: StyleSheet.hairlineWidth,
+    borderWidth: 1,
     borderRadius: 5,
     padding: 10
   },
@@ -293,11 +298,20 @@ const styles = StyleSheet.create({
     width: '90%',
     maxWidth: 640,
     marginTop: 10,
-    marginBotton: 10,
+    marginBottom: 10,
     backgroundColor: 'white',
     borderColor: 'gray',
     borderWidth: StyleSheet.hairlineWidth,
     borderRadius: 5,
     padding: 10
+  },
+  imageContainer: {
+    alignContent: 'flex-start',
+    justifyContent: 'flex-start'
+  },
+  image: {
+    width: '100%',
+    height: 350,
+    resizeMode: 'cover'
   }
 })
