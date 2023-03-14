@@ -7,6 +7,7 @@ import { CardList } from './CardList'
 import { ThemeButton } from '../../components/ThemeButton'
 import { Header } from '../../components/Header'
 import { CustomScrollView } from '../../components/CustomScrollView'
+import { HorizontalCard } from './HorizontalCard'
 
 import { configHome as config } from '../_config/config'
 
@@ -14,6 +15,8 @@ export const Home = () => {
   return (
     <CustomScrollView>
        <View>
+      <Header title="Siguiendo" />
+      <HorizontalCard></HorizontalCard>
       <Header title={config.title} />
         {config.bigCard.map((item, index) => (
           <BigCard
