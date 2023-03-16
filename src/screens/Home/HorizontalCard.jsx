@@ -1,82 +1,65 @@
 import React from 'react'
-import { Platform, View, ScrollView, StyleSheet, Image, TouchableWithoutFeedback } from 'react-native'
+import {
+  Platform,
+  View,
+  ScrollView,
+  StyleSheet,
+  Image,
+  TouchableOpacity
+} from 'react-native'
 import { Text, Card, Button, withTheme } from '@rneui/themed'
 import { ThemeButton } from '../../components/ThemeButton'
-import { useExplorePlayerByID } from '../../screens/Explore/useExplorePlayerByID'
+import { useExplorePlayerByArrayID } from '../../screens/Explore/useExplorePlayerByArrayID'
+import { useMessageStore } from '../../redux/hooks/useMessage'
 
-export const HorizontalCard = () => {
-  const { isLoading, player } = useExplorePlayerByID(30)
+export const HorizontalCard = ({navigation}) => {
+  const { setPlayer } = useMessageStore()
+
+  const { isLoading, playerListFiltered: players } = useExplorePlayerByArrayID([
+    1830, 30, 52, 119
+  ])  
+  
+  const handleNavigate = (item) =>
+  {
+    setPlayer(item.id)        
+    navigation.navigate('Player')    
+  }
 
   return (
-    <TouchableWithoutFeedback>
-    <ScrollView style={{ marginBottom: 20 }} horizontal scrollEnabled>
-      {!isLoading && (
-        <>         
-          <Card containerStyle={styles.card}>
-            <Card.Image style={styles.image} source={player.photo}>              
-            </Card.Image>
-            <Text style={styles.text}>{player.name}</Text>
-          </Card>
-          <Card containerStyle={styles.card}>
-            <Card.Image style={styles.image} source={player.photo}>              
-            </Card.Image>
-            <Text style={styles.text}>{player.name}</Text>
-          </Card>
-          <Card containerStyle={styles.card}>
-            <Card.Image style={styles.image} source={player.photo}>              
-            </Card.Image>
-            <Text style={styles.text}>{player.name}</Text>
-          </Card>
-          <Card containerStyle={styles.card}>
-            <Card.Image style={styles.image} source={player.photo}>              
-            </Card.Image>
-            <Text style={styles.text}>{player.name}</Text>
-          </Card>
-          <Card containerStyle={styles.card}>
-            <Card.Image style={styles.image} source={player.photo}>              
-            </Card.Image>
-            <Text style={styles.text}>{player.name}</Text>
-          </Card>
-          <Card containerStyle={styles.card}>
-            <Card.Image style={styles.image} source={player.photo}>              
-            </Card.Image>
-            <Text style={styles.text}>{player.name}</Text>
-          </Card>
-          <Card containerStyle={styles.card}>
-            <Card.Image style={styles.image} source={player.photo}>              
-            </Card.Image>
-            <Text style={styles.text}>{player.name}</Text>
-          </Card>
-          <Card containerStyle={styles.card}>
-            <Card.Image style={styles.image} source={player.photo}>              
-            </Card.Image>
-            <Text style={styles.text}>{player.name}</Text>
-          </Card>
-          <Card containerStyle={styles.card}>
-            <Card.Image style={styles.image} source={player.photo}>              
-            </Card.Image>
-            <Text style={styles.text}>{player.name}</Text>
-          </Card>
-        </>
-      )}
+    <ScrollView style={styles.scrollView} horizontal scrollEnabled>
+      {!isLoading &&
+        players.length > 0 &&
+        players.map((p) => (
+          <TouchableOpacity key={p.id} onPress={() => handleNavigate(p)}>
+            <Card containerStyle={styles.card}>
+              <Card.Image
+                style={styles.image}
+                source={{ uri: p.photo }}
+              ></Card.Image>
+              <Text style={styles.text}>{p.name}</Text>
+            </Card>
+          </TouchableOpacity>
+        ))}
     </ScrollView>
-    </TouchableWithoutFeedback>
   )
 }
 
 const styles = StyleSheet.create({
-  card: {    
+  scrollView: {
+    marginBottom: 20,
+  },
+  card: {
     flexDirection: 'row',
     width: 150,
     height: 150,
-    justifyContent: 'center',    
+    justifyContent: 'center',
     padding: 10,
-    borderRadius: 15,
+    borderRadius: 15
   },
-  text: {        
+  text: {
     color: 'black',
     fontWeight: 'bold',
-    textAlign: 'center' 
+    textAlign: 'center'
   },
   image: {
     width: 130,

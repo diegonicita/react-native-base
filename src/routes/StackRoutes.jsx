@@ -20,6 +20,7 @@ export const StackRoutesHome = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen options={options} name="Home" component={Home} />
+      <Stack.Screen options={options} name="Player" component={Player} />
     </Stack.Navigator>
   )
 }

@@ -8,16 +8,15 @@ import { ThemeButton } from '../../components/ThemeButton'
 import { Header } from '../../components/Header'
 import { CustomScrollView } from '../../components/CustomScrollView'
 import { HorizontalCard } from './HorizontalCard'
-
 import { configHome as config } from '../_config/config'
 
-export const Home = () => {
+export const Home = ({ navigation }) => {
   return (
     <CustomScrollView>
-       <View>
-      <Header title="Siguiendo" />
-      <HorizontalCard></HorizontalCard>
-      <Header title={config.title} />
+      <View>
+        <Header title="Siguiendo" />
+        <HorizontalCard navigation={navigation} />
+        <Header title={config.title} />
         {config.bigCard.map((item, index) => (
           <BigCard
             key={index}
@@ -37,7 +36,7 @@ export const Home = () => {
             minutes={item.news.time.english}
             image={item.news.image}
           />
-        ))} 
+        ))}
         <CardList list={config.list} />
       </View>
     </CustomScrollView>

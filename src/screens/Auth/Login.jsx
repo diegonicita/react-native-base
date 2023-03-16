@@ -9,83 +9,58 @@ import {
 } from 'react-native'
 
 import { Formik } from 'formik'
-import AsyncStorage from '@react-native-async-storage/async-storage'
-import { useMessageStore } from '../../redux/hooks/useMessage'
-import usersFromJSON from './helpers/dataJSON/users.json'
 import { loginValidationSchema } from './loginValidation'
-
+// Hooks
+import { useMessageStore } from '../../redux/hooks/useMessage'
+import { useGetUserList } from './useGetUserList'
 // Components
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
 import { CustomScrollView } from '../../components/CustomScrollView'
 import { CustomBackgroundView } from '../../components/CustomBackgroundView'
-
+// Images
 const images = [
   require('../../assets/soccer-player-001.png'),
   require('../../assets/soccer-player-001-dark.png')
 ]
-
+// Configuration
 const config = {
   title: 'Iniciar Sesión'
 }
 
 export const Login = ({ navigation }) => {
   const [isSubmmiting, setIsSubmmiting] = useState(false)
-  const [isLoadingData, setIsLoadingData] = useState(true)
-  const [userList, setUserList] = useState([])
   const [serverStatus, setServerStatus] = useState(0)
+
+  const { mode } = useThemeMode()
   const { isLogged, setIsLogged, setMyClub, userCounter, setUserLogged } =
     useMessageStore()
-  const { mode } = useThemeMode()
+  const { isLoadingData, userList } = useGetUserList(userCounter)
 
-  useEffect(() => {
-    const addUserList = async () => {
-      await setUserList(usersFromJSON.response)
+  const checkPassword = (user, password) => {
+    if (user.user.password === password) {
+      setIsLogged(true)
+      setUserLogged([
+        user.user.id,
+        user.user.username,
+        user.user.firstname,
+        user.user.lastname,
+        user.user.club
+      ])
+      setMyClub(user.user.club)
+      setServerStatus(200)
+      return true
     }
-
-    addUserList()
-
-    const addDataFromStorage = async () => {
-      try {
-        const value = await AsyncStorage.getItem('@storage_user')
-        if (value !== null) {
-          setUserList((p) => [...p, { user: JSON.parse(value) }])
-        }
-      } catch (e) {}
-    }
-    addDataFromStorage()
-    setIsLoadingData(false)
-  }, [userCounter])  
-
+    setUserLogged(null)
+    setMyClub(null)
+    setServerStatus(401)
+    setTimeout(() => setServerStatus(0), 1000)
+    return false
+  }
   const handleSubmit = async (values) => {
     setIsSubmmiting(true)
-    const listaFiltrada = userList.filter(
-      (item) => item.user.username === values.username
-    )
-    if (listaFiltrada.length !== 0) {
-      if (listaFiltrada[0].user.password === values.password) {
-        setIsLogged(true)
-        setUserLogged([
-          listaFiltrada[0].user.id,
-          listaFiltrada[0].user.username,
-          listaFiltrada[0].user.firstname,
-          listaFiltrada[0].user.lastname,
-          listaFiltrada[0].user.club,          
-        ])
-        setMyClub(listaFiltrada[0].user.club)
-        setServerStatus(200) // Ok
-      } else {
-        setIsLogged(false)
-        setMyClub(null)
-        setServerStatus(401)
-        setTimeout(() => setServerStatus(0), 1000) // unauthorized
-      }
-    } else {
-      setIsLogged(false)
-      setMyClub(null)
-      setServerStatus(401) // unauthorized
-      setTimeout(() => setServerStatus(0), 1000) // unauthorized
-    }
+    const user = userList.find((item) => item.user.username === values.username)
+    checkPassword(user, values.password)
     setIsSubmmiting(false)
   }
 
@@ -182,7 +157,7 @@ export const Login = ({ navigation }) => {
                     ¿No tienes una cuenta? Registrate{' '}
                   </Text>
                 </TouchableOpacity>
-              )}              
+              )}
             </View>
           )}
         </Formik>
