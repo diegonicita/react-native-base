@@ -38,7 +38,7 @@ export const Login = ({ navigation }) => {
   const { isLoadingData, userList } = useGetUserList(userCounter)
 
   const checkPassword = (user, password) => {
-    if (user.user.password === password) {
+    if (user?.user?.password === password) {
       setIsLogged(true)
       setUserLogged([
         user.user.id,
@@ -51,6 +51,7 @@ export const Login = ({ navigation }) => {
       setServerStatus(200)
       return true
     }
+    setIsLogged(null)
     setUserLogged(null)
     setMyClub(null)
     setServerStatus(401)
@@ -67,6 +68,8 @@ export const Login = ({ navigation }) => {
   const handleNavigateToRegister = () => {
     navigation.navigate('Register')
   }
+
+  console.log(isLogged)
 
   return (
     <CustomBackgroundView mode={mode}>

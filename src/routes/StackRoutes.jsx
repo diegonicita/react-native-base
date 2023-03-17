@@ -1,6 +1,7 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { Home } from '../screens/Home/Home'
+import { HomePlayer } from '../screens/Home/HomePlayer'
 import { ExploreV2 } from '../screens/Explore/ExploreV2'
 import { Club } from '../screens/Explore/Club'
 import { Player } from '../screens/Explore/Player'
@@ -20,7 +21,7 @@ export const StackRoutesHome = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen options={options} name="Home" component={Home} />
-      <Stack.Screen options={options} name="Player" component={Player} />
+      <Stack.Screen options={options} name="HomePlayer" component={HomePlayer} />
     </Stack.Navigator>
   )
 }

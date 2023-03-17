@@ -20,9 +20,8 @@ export const HorizontalCard = ({navigation}) => {
   ])  
   
   const handleNavigate = (item) =>
-  {
-    setPlayer(item.id)        
-    navigation.navigate('Player')    
+  {    
+    navigation.navigate('HomePlayer', {id: item.id})    
   }
 
   return (
