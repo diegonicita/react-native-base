@@ -8,12 +8,12 @@ import { LogoClubCard } from './LogoClubCard'
 import { DataPlayerCard} from './DataPlayerCard'
 
 const config = {
-  title: 'Player'
+  title: 'Jugador'
 }
 
-export const Player = () => {
-  const { player: playerID } = useMessageStore()  
-  const { player } = useExplorePlayerByID(playerID)
+export const Player = ({route}) => {
+  
+  const { player } = useExplorePlayerByID(route.params.id)
 
   return (
     <>
@@ -28,4 +28,3 @@ export const Player = () => {
 }
 
 export default Player
-

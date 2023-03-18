@@ -24,7 +24,7 @@ export const Club = ({ navigation }) => {
 
   const handleNavigateToPlayer = (item) => {
     setPlayer(item.player.id)
-    navigation.navigate('Player')
+    navigation.navigate('Player', {id: item.player.id})
   }
 
   return (
@@ -70,7 +70,7 @@ export const Club = ({ navigation }) => {
         </>
       )}
       <>
-        {!isLoaded && <ClubSkeleton />}
+        {!isLoaded && <ClubSkeleton ancho="98%" />}
         <Image
           style={{ width: 1, height: 1, marginTop: 20 }}
           source={{ uri: teamListFiltered[0]?.venue?.image }}
@@ -81,7 +81,7 @@ export const Club = ({ navigation }) => {
   )
 }
 
-const styles = StyleSheet.create({  
+const styles = StyleSheet.create({
   card: {
     borderColor: '#2089dc55',
     borderRadius: 5

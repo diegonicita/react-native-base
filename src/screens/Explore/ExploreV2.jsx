@@ -41,7 +41,7 @@ export const ExploreV2 = ({ navigation }) => {
   const handleNavigate = (item) => {
     if (item.type === 'player') {
       setPlayer(item.id)
-      navigation.navigate('Player')
+      navigation.navigate('Player', {id: item.id})
     } else {
       setClub(item.id)
       navigation.navigate('Club')

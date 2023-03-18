@@ -4,26 +4,26 @@ import { Card } from '@rneui/themed'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 export const LogoClubCard = ({ name, logo }) => {
-  const [isFavorite, setIsFavorite] = useState(false)
-  const handleFavorite = () => {
-    setIsFavorite(!isFavorite)
-  }
+  // const [isFavorite, setIsFavorite] = useState(false)
+  // const handleFavorite = () => {
+  //   setIsFavorite(!isFavorite)
+  // }
 
   return (
-    <TouchableOpacity onPress={handleFavorite}>
+    // <TouchableOpacity>
     <Card wrapperStyle={styles.wrapper} containerStyle={styles.container}>          
-          <Ionicons
+          {/* <Ionicons
             style={styles.iconFavorite}
             name={isFavorite ? 'heart' : 'heart-outline'}
             color={isFavorite ? 'darkred' : 'black'}
             size={32}                    
-          />              
+          />               */}
       <Card.Title style={styles.title}>{name}</Card.Title>
       <View style={styles.imageView}>
         <Card.Image style={styles.image} source={{ uri: logo }} />
       </View>
     </Card>
-    </TouchableOpacity>
+    // </TouchableOpacity>
   )
 }
 
